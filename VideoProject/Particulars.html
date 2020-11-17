@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="Particulars/css/Particulars-Video.css" />
+		<link rel="stylesheet" href="Particulars/css/Particulars.css" />
+		<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+		<style>
+			.comment-reply-wrap{
+				padding: 14px 20px;
+			    background-color: #f8f8f8;
+			    border-radius: 2px;
+			    -webkit-border-radius: 2px;
+			    -moz-border-radius: 2px;
+			    margin: 17px 0 8px;
+			}
+			.head-wraps{
+				position: static;
+   				display: inline-block;
+			}
+			.head-wraps h3{
+				font-size: 14px;
+			}
+			.reply-con{
+				padding-top: 6px;
+			    line-height: 1.8;
+			    word-wrap: break-word;
+			}
+			.icon-close{
+				position: absolute;
+			    color: #979797;
+			    top: 19px;
+			    right: 19px;
+			    cursor: pointer;
+			    width: 10px;
+			    height: 10px;
+			}
+			.icon-close:before{
+				border-bottom: 1px solid #595959;
+				position: absolute;
+				width: 9px;
+				content: "";
+				top: 5px;
+				transform: rotate(45deg);
+			}
+			.icon-close:after{
+				border-bottom: 1px solid #595959;
+				top: 5px;
+				position: absolute;
+				width: 9px;
+				content: "";
+				transform: rotate(-45deg);
+			}
+			.liked {
+			    border: solid 1px rgba(153,153,153,.5);
+			    background-color: #fff;
+			    color: #333;
+			}
+			.liked span{
+				margin-left: 0px;
+			}
+			.liked i{
+				margin-right: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header-common">
+			<div class="header-con">
+				<a class="logo-v-center"><span><img src="img/timg.png"></span></a>
+				<ul class="nav-list-left-ul">
+					<li class="nav-item"><a href="Homepage.html">首页</a></li>
+					<li class="nav-item hover-elem">
+						<i class="icon-arrow-down"></i>
+						<a>发现</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											作品
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>广告</a></li>
+											<li class="nav-sublist-item"><a>宣传片</a></li>
+											<li class="nav-sublist-item"><a>剧情短片</a></li>
+											<li class="nav-sublist-item"><a>纪录片</a></li>
+											<li class="nav-sublist-item"><a>创意混剪</a></li>
+											<li class="nav-sublist-item"><a>MV</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											创作人
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>导演</a></li>
+											<li class="nav-sublist-item"><a>摄影师</a></li>
+											<li class="nav-sublist-item"><a>剪辑师</a></li>
+											<li class="nav-sublist-item"><a>美术</a></li>
+											<li class="nav-sublist-item"><a>制片人</a></li>
+											<li class="nav-sublist-item"><a>机构</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											文章
+											<i class="icon-arrow-right"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item"><a>关注</a></li>
+					<li class="nav-item school hover-elem">
+						<a>学院</a>
+					</li>
+					<li class="nav-item resource hover-elem resource-video">
+						<i class="icon-arrow-down"></i>
+						<a>素材</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											视频
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>动物</a></li>
+											<li class="nav-sublist-item"><a>人物</a></li>
+											<li class="nav-sublist-item"><a>自然</a></li>
+											<li class="nav-sublist-item"><a>科技</a></li>
+											<li class="nav-sublist-item"><a>建筑物</a></li>
+											<li class="nav-sublist-item"><a>商业</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											音乐
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>温暖</a></li>
+											<li class="nav-sublist-item"><a>明快</a></li>
+											<li class="nav-sublist-item"><a>抒情</a></li>
+											<li class="nav-sublist-item"><a>振奋人心</a></li>
+											<li class="nav-sublist-item"><a>钢琴</a></li>
+											<li class="nav-sublist-item"><a>弦乐组</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item"><a>活动</a></li>
+					<li class="nav-item hover-elem">
+						<a class="new">APP</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<div class="xpccode">
+									<img src="img/235b557e8b381c5.png" />
+									<p>
+										扫描二维码
+										<br />
+										 下载新片场APP
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item hover-elem">
+						<i class="icon-arrow-down"></i>
+						<a>更多</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="genduo-li"><a>场库</a></li>
+									<li class="genduo-li"><a>新片场影业</a></li>
+									<li class="genduo-li"><a>新片场短视频</a></li>
+									<li class="genduo-li"><a>新片场营销</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item newera">
+						<a><img src="img/155c3db8705ce6a.png"></a>
+					</li>
+				</ul>
+				<ul class="right-part">
+					<li class="search-btn-icon-search">
+						<span class="yuan"></span>
+						<span class="gang"></span>
+					</li>
+					<li class="user-face">
+						<span class="new-msginfo-show-msg"></span>
+						<a>
+							<div class="user-face-con">
+								<img src="img/100.jpg"/>
+								<span class="author-v-yellow-v"></span>
+							</div>
+						</a>
+						<div class="faxian-list user-hover-wrap">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="user-li"><a>个人主页</a></li>
+									<li class="user-li"><a>消息提醒</a></li>
+									<li class="line"></li>
+									<li class="user-li"><a>收藏夹</a></li>
+									<li class="user-li"><a>我的课程</a></li>
+									<li class="user-li"><a>我的素材</a></li>
+									<li class="user-li"><a>我的订单</a></li>
+									<li class="user-li"><a>我的优惠券</a></li>
+									<li class="user-li"><a>我的购物车</a></li>
+									<li class="line"></li>
+									<li class="user-li"><a>认证信息</a></li>
+									<li class="user-li"><a>账号设置</a></li>
+									<li class="user-li"><a>退出登录</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="upload-btn">
+						<a href="uploading.html">上传作品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="filmplay-container">
+			<div class="play-box">
+				<div class="banner-linear">
+					<div class="filmplay">
+						<div class="film-main banner-wrap">
+							<div id="xpcplayer">
+								<div class="video-js-box vim-css vjs-paused">
+									<video id="xpc_video" poster src="Particulars/mp4/5ca1dc3801dd0.mp4">
+										<source src="Particulars/mp4/5ca1dc3801dd0.mp4" type="video/mp4"></source>
+									</video>
+									<div class="vjs-styles-check"></div>
+									<img class="vjs-poster" src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg"/>
+									<!--
+                                    	中屏播放按钮
+                                    -->
+									<div class="vjs-big-play-button">
+										<span></span>
+									</div>
+									<!--
+                                    	视频加载图标
+                                    -->
+									<div class="vjs-spinner">
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+									</div>
+									<!--
+                                    	视频下面的控件
+                                    -->
+									<div class="vjs-controls">
+										<div class="vjs-play-control"><span></span></div>
+										<div class="vjs-progress-control">
+											<div class="vjs-progress-holder">
+												<div class="vjs-progress-holder">
+													<div class="vjs-load-progress"></div>
+													<div class="vjs-play-progress"></div>
+													<div class="vjs-preload-holder">
+														<div class="black-background"></div>
+														<div class="buffer"></div>
+													</div>
+													<span class="vjs-current-time-display">00:00</span>
+												</div>
+											</div>
+										</div>
+										<div class="vjs-time-control">
+											<span class="vjs-duration-display">02:49</span>
+										</div>
+										<div class="vjs-volume-control">
+												<div>
+													<span class="vjs-volume-level-on"></span>
+													<span class="vjs-volume-level-on"></span>
+													<span class="vjs-volume-level-on"></span>
+													<span class="vjs-volume-level-on"></span>
+													<span class="vjs-volume-level-on"></span>
+													<span class="vjs-volume-level-on"></span>
+												</div>
+											</div>
+										<div class="vjs-origin-control">
+												<div class="hd">
+													<span class="hd-bridge"></span>
+													<span class="hd-num">720p</span>
+												</div>
+												<div class="oc">
+														<span class="oc-item">
+															1080p
+															<i></i>
+														</span>
+														<span class="oc-item">
+															720p
+															<i></i>
+														</span>
+														<span class="oc-item">540p</span>
+														<span class="oc-item">360p</span>
+												</div>
+											</div>
+										<div class="vjs-fullscreen-control">
+											<div class="exit-fullscreen"></div>
+										</div>
+									</div>
+									<!--
+                                    	播放完后页面阴影
+                                    -->
+									<div class="vjs-preload-circle">
+										<div class="preload-circle"></div>
+									</div>
+									<!--
+                                    	播放完页面出现重播图标
+                                    -->
+									<div class="vjs-end-text">
+										<div class="end-text">
+											<span class="reload-img"></span>
+											<span class="reload-text">
+												<img src="Particulars/img/589c07876ccc4.jpg"/>
+												<br />
+												重播
+											</span>
+										</div>
+									</div>
+									<!--
+                                    	播放出现异常
+                                    -->
+									<div class="video-error">
+										<div class="error-text-container">
+											<p>视频加载失败</p>
+											<button id="video-retry">点击重试</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filmplay-detail clearfix">
+				<div class="filmplay-detail-left">
+					<div class="filmplay-info">
+						<div class="filmplay-info-common left-section">
+							<div class="video-mark">
+								<a><img src="Particulars/img/changshang.png"></a>
+							</div>
+							<span class="authorize-con">署名-非商业性使用</span>
+							<div class="title-wrap">
+								<h3>甲方你好，是我太小</h3>
+							</div>
+							<div class="filmplay-intro fs_12 fw_300 c_b_9">
+								<span class="cate v-center">
+									<a>广告</a>
+									-
+									<a>餐饮食品</a>
+								</span>
+								<span class="i-icon v-center"></span>
+								<span class="cate v-center">
+									<a>Vlog</a>
+									-
+									<a>幕后</a>
+								</span>
+								<span class="update-time v-center">
+									<i>04-01 17:38</i>
+								</span>
+								<a class="authority-wrap v-center">
+									<img src="Particulars/img/anquan.png" />
+								</a>
+								<span class="J_whistleblow span_whistleblow">
+									举报
+								</span>
+							</div>
+							<div class="filmplay-data">
+								<div class="filmplay-data-play filmplay-data-info">
+									<span></span>
+									<i>14,819</i>
+								</div>
+								<div class="filmplay-data-btn fs_12">
+									<span class="like-btn  v-center" style="display: none;">
+										<span class="like-hand icon-like show"></span>
+										<i class="fs_12">喜欢</i>
+										<span class="v-center like-counts fs_12 c_w_f fw_300">
+											491
+										</span>
+									</span>
+									<span class="like-btn  v-center liked">
+										<span class="like-hand icon-like show"></span>
+										<i class="fs_12">已喜欢</i>
+										<span class="v-center like-counts fs_12 c_w_f fw_300">
+											491
+										</span>
+									</span>
+									<span class="xpc-stat border-btn share-btn show-qr c_b_3 v-center share-host">
+										<i class="icon-share chrome-10px-left"></i>
+										<span class="v-center c_b_3 fs_12 fw_600">分享</span>
+									</span>
+									<span class="border-btn c_b_3 fs_12 fw_600 collection-wrap">
+										<a class="collection-star hollow-star"></a>
+										<em class="collection-text">收藏</em>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="filmplay-info-desc left-section">
+							<p class="desc line-hide fs_14 c_b_3 fw_300 line-hide-3">
+								【徐好玩瞎拍系列专辑vol.2】
+								甲方说的对，餐饮类产品就应该向宇宙里发展，格局要大！是我太小了...					</p>
+							<div class="more fs_12 fw_600 c_b_9 dn">展开全文</div>
+						</div>
+						<div class="filmplay-info-photo left-section c_b_3">
+							<h3 class="title-item fs_14 fw_600">
+								<img src="Particulars/img/zhaoxiang.PNG" />
+								<span>剧照</span>
+							</h3>
+							<ul class="photo-list">
+								<li>
+									<a>
+										<img src="Particulars/img/juzhao-1.png"/>
+										<span class="cover-con"></span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="Particulars/img/juzhao-2.png"/>
+										<span class="cover-con"></span>
+									</a>
+								</li>
+								<li>
+									<a>
+										<img src="Particulars/img/juzhao-3.png"/>
+										<span class="cover-con"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="filmplay-info-tags left-section">
+							<h3 class="title-item fs_14 fw_600">
+								<img src="Particulars/img/biaoqian.PNG"/>
+								<span>标签</span>
+							</h3>
+							<div class="fs_12 fw_300 c_b_3 tag-wrapper">
+								<a class="tag-grey">搞笑</a>
+								<a class="tag-grey">编剧</a>
+								<a class="tag-grey">幕后</a>
+								<a class="tag-grey">一镜到底</a>
+								<a class="tag-grey">洗脑</a>
+							</div>
+						</div>
+					</div>
+					<div class="common-comment">
+						<div class="comment-anchor"></div>
+						<div class="comment-top">
+							<h3 class="fs_20 fw_600 c_b_3">
+								评论&nbsp;<span class="total-counts fs_14 c_b_9">79</span>
+							</h3>
+							<div class="input-wrap">
+								<a class="avator-wrap">
+									<img class="user-avator head-wrap" src="img/100.jpg" />
+									<span class="author-v-yellow-v"></span>
+								</a>
+								<div class="input-area clearfix">
+									<textarea name="content" id="comment_content" placeholder="请输入评论内容"></textarea>
+									<div class="relpy-wrap fs_14 fw_300 c_b_9 ">
+										回复
+										<span class="reply-user fw_600">手机用户3745</span>
+										&nbsp;
+										<span class="reply-con">比去年知乎搞的那个洗脑广告棒太多了！！！</span>
+										<i class="icon-close"></i>
+									</div>
+									<span class="send-comment fs_12 bg-red">发表评论</span>
+								</div>
+							</div>
+						</div>
+						<div class="comment-bottom">
+							<ul class="comment-list">
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-reply-wrap">
+											<a class="head-wraps"><h3>俞炜巍__Tanc</h3></a>
+											<div class="reply-con fs_14 fw_300 c_b_26">这个属于逐帧动画吗</div>
+										</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a>
+										<span class="head-wrap">
+											<img src="Particulars/img/265c22fa76e3abc.png"/>
+											<span class="author-v-yellow-v"></span>
+										</span>
+									</a>
+									<div class="comment-wrap clearfix">
+										<div class="user-time">
+											<a><span class="user-name fs_14 fw_600 c_b_3">威登印象电影工作室</span></a>
+											<span class="send-time fs_12 fw_300 c_w_87">今天 16:28</span>
+										</div>
+										<div class="comment-con fs_14 fw_300 c_b_26">666</div>
+										<div class="comment-btn fs_12 fw_600 c_b_9">
+											<span class="report-btn">举报</span>
+											<span class="i-icon v-center"></span>
+											<span class="relpy-btn">回复</span>
+											<span class="i-icon v-center"></span>
+											<span class="like-btns">
+												<i class="approve-text">赞</i>
+												&nbsp;
+												<i class="approve-counts">
+													(
+														<i class="counts">0</i>
+													)
+												</i>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="comment-empty fs_16 dn">还没有人发表评论，来第一个发言吧！</div>
+							<div class="more-comment fs_14 fw_600 more-btn c_b_9">更多</div>
+						</div>
+					</div>
+				</div>
+				<div class="filmplay-detail-right">
+					<div class="user-team">
+						<div class="filmplay-creator right-section">
+							<div>
+								<h3 class="fs_20 fw_600">本片创作人</h3>
+								<a class="btn join-creator-btn fs_12 fw_600 c_b_3">你也参与该片创作?</a>
+							</div>
+							<ul class="creator-list">
+								<li>
+									<a class="head-wrap">
+										<img src="Particulars/img/juzhao-3.png" />
+										<span class="author-v-yellow-v"></span>
+									</a>
+									<div class="creator-info">
+										<a><span class="name fs_14 fw_600 c_b_3 line-hide-1">万一通道</span></a>
+										<span class="roles fs_12 fw_300 c_b_9">
+											策划/编剧/导演/剪辑/出品人
+										</span>
+									</div>
+									<div class="follow-btn fs_12 c_w_f bg-red">关注</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--
+						<div class="inviting dn"></div>
+                    -->
+					<div class="visit-creator-wrap">
+						<div class="visit-title">
+							<h3 class="fs_20 fw_600">来访创作人</h3>
+							<div class="visit-tab">
+								<span class="recent-tab fs_12 fw_600 c_b_3 select">看过</span>
+								<span class="like-tab fs_12 fw_600 c_b_3">喜欢</span>
+							</div>
+							<div class="creator-contanier recent-creator-contanier">
+								<ul class="creator-list">
+									<li>
+										<a>
+											<span class="head-wrap">
+												<img src="img/100.jpg"/>
+												<span class="author-v-yellow-v"></span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<span class="head-wrap">
+												<img src="img/100.jpg"/>
+												<span class="author-v-yellow-v"></span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<span class="head-wrap">
+												<img src="img/100.jpg"/>
+												<span class="author-v-yellow-v"></span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<span class="head-wrap">
+												<img src="img/100.jpg"/>
+												<span class="author-v-yellow-v"></span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<span class="head-wrap">
+												<img src="img/100.jpg"/>
+												<span class="author-v-yellow-v"></span>
+											</span>
+										</a>
+									</li>
+									<li class="mores">
+										<a class="icon-arrow-right">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="creator-contanier like-creator-contanier dn"></div>
+						</div>
+					</div>
+					<div class="filmplay-recommend right-section">
+						<div>
+							<h3 class="fs_20 fw_600">创作人的其他作品</h3>
+							<a class="btn fs_12 fw_600 c_b_3">更多</a>
+						</div>
+						<ul class="recommend-list">
+							<li>
+								<a class="cover-wrap">
+									<img src="Particulars/img/5c435230a77c6.jpeg@335w.jpg"/>
+									<span class="cover-con"></span>
+								</a>
+								<div class="right-con">
+									<div class="article-contanier  fenleiNumber">
+										<a>谁家过年不吃顿饺子啊！穷艺人也有团建vlog</a>
+										<div class="cate-wrap">
+											<span class="fs_12 fw_300 c_b_9 line-hide-1 createFenlei">剧情短片 - 励志Vlog - 日常</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="cover-wrap">
+									<img src="Particulars/img/5c435230a77c6.jpeg@335w.jpg"/>
+									<span class="cover-con"></span>
+								</a>
+								<div class="right-con">
+									<div class="article-contanier  fenleiNumber">
+										<a>谁家过年不吃顿饺子啊！穷艺人也有团建vlog</a>
+										<div class="cate-wrap">
+											<span class="fs_12 fw_300 c_b_9 line-hide-1 createFenlei">剧情短片 - 励志Vlog - 日常</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="cover-wrap">
+									<img src="Particulars/img/5c435230a77c6.jpeg@335w.jpg"/>
+									<span class="cover-con"></span>
+								</a>
+								<div class="right-con">
+									<div class="article-contanier  fenleiNumber">
+										<a>谁家过年不吃顿饺子啊！穷艺人也有团建vlog</a>
+										<div class="cate-wrap">
+											<span class="fs_12 fw_300 c_b_9 line-hide-1 createFenlei">剧情短片 - 励志Vlog - 日常</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="cover-wrap">
+									<img src="Particulars/img/5c435230a77c6.jpeg@335w.jpg"/>
+									<span class="cover-con"></span>
+								</a>
+								<div class="right-con">
+									<div class="article-contanier  fenleiNumber">
+										<a>谁家过年不吃顿饺子啊！穷艺人也有团建vlog</a>
+										<div class="cate-wrap">
+											<span class="fs_12 fw_300 c_b_9 line-hide-1 createFenlei">剧情短片 - 励志Vlog - 日常</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="cover-wrap">
+									<img src="Particulars/img/5c435230a77c6.jpeg@335w.jpg"/>
+									<span class="cover-con"></span>
+								</a>
+								<div class="right-con">
+									<div class="article-contanier  fenleiNumber">
+										<a>谁家过年不吃顿饺子啊！穷艺人也有团建vlog</a>
+										<div class="cate-wrap">
+											<span class="fs_12 fw_300 c_b_9 line-hide-1 createFenlei">剧情短片 - 励志Vlog - 日常</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="Particulars/js/Particulars.js" ></script>
+	</body>
+</html>

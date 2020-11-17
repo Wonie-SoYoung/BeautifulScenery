@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="Commodity/css/Commodity.css"/>
+		<link rel="stylesheet" type="text/css" href="Commodity/css/Commodity2.css"/>
+		<style>
+			.imglogo{
+				position: absolute;
+				top: 40px;
+				left: 40px;
+			}
+			/*出场特效*/
+			@-webkit-keyframes chuchangimg1{
+				0%{transform: scale(0.1);}
+				100%{transform: scale(1);}
+			}
+			@-webkit-keyframes chuchangwire{
+				0%{height: 0px;}
+				100%{height: 270px;}
+			}
+			@-webkit-keyframes chuchangmenutitle{
+				0%{transform: translateX(-20px);opacity: 0;}
+				100%{transform: translateX(0);opacity: 1;}
+			}
+			@-webkit-keyframes chuchangmenuber{
+				0%{transform: translateY(-20px);opacity: 0;}
+				100%{transform: translateY(0);opacity: 1;}
+			}
+			@-webkit-keyframes chuchanggoods{
+				0%{transform: translateY(20px);opacity: 0;}
+				100%{transform: translateY(0);opacity: 1;}
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="content">
+			<img src="Payment/img/QQ截图20190209191914.png" width="52px" height="52px" class="imglogo" onclick="javascript:window.location.href='Home_page.html'" onmouseover="javascript:this.style.cursor='pointer'"/>
+			<div id="menutitle">
+				<span>商品のご案内</span><br />
+				<span>Products</span>
+			</div>
+			<div id="wire"></div>
+			<div id="menuber">
+				<div id="Basedonthetea" onmouseover="arrowhover(this)" onmouseout="arrowleave(this)">
+					<span>ベースとなる茶葉</span><br />
+					<div id="arrow">
+						<div class="arrow1"></div><div class="arrow2"></div><div class="arrow3"></div>
+					</div>
+					<span>茶っぱ図鑑</span>
+				</div>
+				<div id="gps">
+					<ul>
+						<li onmouseover="columnhover(this)" onmouseout="columnleave(this)">
+							<span>薮北茶</span>
+							<div class="tick">
+								<div></div>
+								<div></div>
+							</div>
+						</li>
+						<li onmouseover="columnhover(this)" onmouseout="columnleave(this)">
+							<span>即使是绿色</span>
+							<div class="tick">
+								<div></div>
+								<div></div>
+							</div>
+						</li>
+						<li onmouseover="columnhover(this)" onmouseout="columnleave(this)">
+							<span>Yutaka Green</span>
+							<div class="tick">
+								<div></div>
+								<div></div>
+							</div>
+						</li>
+						<li onmouseover="columnhover(this)" onmouseout="columnleave(this)">
+							<span>晨露</span>
+							<div class="tick">
+								<div></div>
+								<div></div>
+							</div>
+						</li>
+						<li onmouseover="columnhover(this)" onmouseout="columnleave(this)">
+							<span>Asanoka</span>
+							<div class="tick">
+								<div></div>
+								<div></div>
+							</div>
+						</li>
+						<li onmouseover="columnhover(this)" onmouseout="columnleave(this)">
+							<span>Okumidori</span>
+							<div class="tick">
+								<div></div>
+								<div></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="Cuttingline"></div>
+				<div id="toolber">
+					<span>相关标签</span>
+					<ul>
+						<li>人気</li>
+						<li>ギフト</li>
+						<li>深蒸し茶</li>
+						<li>抹茶入</li>
+						<li>粉末茶</li>
+						<li>水出し可</li>
+						<li>ティーバッグ</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--商品及地址-->
+		<div id="goods">
+			<ul id="product__wrapper_ul">
+				<li class="li_gift li_hukamushi-cha" onclick="javascript:window.location.href='Details.html'">
+					<div class="detailshead">
+						<img src="Commodity/img/01.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">極知覧茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥3,000 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							使用精心挑选的“西阵新茶”。
+							您可以享受豆芽的香气和味道如玉露。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha" onclick="javascript:window.location.href='Details2.html'">
+					<div class="detailshead">
+						<img src="Commodity/img/02.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">特上知覧茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #EBB9AA;background-color: #EBB9AA;">人気</li>
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥2,000 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							豪华使用优质的omikuri茶叶。
+							热情好客。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/03.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">天承</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥1,500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							使用茶叶精心挑选的茶叶的承诺茶。
+							热情好客。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/04.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">思入(おもいいれ)金</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #EBB9AA;background-color: #EBB9AA;">人気</li>
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥1,000 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							我们店里最受欢迎的先进绿茶。
+							优雅和果味的香味，如葡萄。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/05.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">思入(おもいいれ)銀</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #EBB9AA;background-color: #EBB9AA;">人気</li>
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥800 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							清新的口感和清爽的香气茶，适合用餐。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/06.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">抹茶入くき茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+									<li style="border-color: #A7D2B3;background-color: #A7D2B3;">抹茶入</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥700 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							它是一种很好的茶，可以平衡茶道的甜味和抹茶的丰富性。
+							我什么时候想快点喝
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/07.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">抹茶入玄米茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+									<li style="border-color: #A7D2B3;background-color: #A7D2B3;">抹茶入</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							混合强烈烤糙米，绿茶，白花和高品质的抹茶。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/08.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">ほうじ茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							它的特点是香气具有放松效果。
+							它可以作为休闲茶享用。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/09.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">思入(おもいいれ)金</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #EBB9AA;background-color: #EBB9AA;">人気</li>
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥1,000 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							我们店里最受欢迎的先进绿茶。
+							优雅和果味的香味，如葡萄。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/10.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">思入(おもいいれ)銀</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥800 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							清新的口感和清爽的香气茶，适合用餐。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/11.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">倭</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							适合搭配新鲜收敛剂。
+							对于易于饮用且易于饮用的日常茶。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/12.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">上くき茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							茶使用部分绿茶茎。
+							感受到新鲜和甜味。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/13.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">抹茶入玄米茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #EBB9AA;background-color: #EBB9AA;">人気</li>
+									<li style="border-color: #A7D2B3;background-color: #A7D2B3;">抹茶入</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							混合强烈烤糙米，绿茶，白花和高品质的抹茶。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/14.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">ほうじ茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #EBB9AA;background-color: #EBB9AA;">人気</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							它的特点是香气具有放松效果。
+							它可以作为休闲茶享用。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/15.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">上粉茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥1,000 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							这是一种茶叶筛选出的茶叶，在高级煎茶的整理过程中完成。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/16.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">知覧紅茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥700 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							日本茶以橙色品种完成。
+							它适合日本的糖果和糕点。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/17.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">べにふうき</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #C0C3DA;background-color: #C0C3DA;">粉末茶</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥700 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							完成容易饮用的Fuuki茶。
+							推荐用于花粉热和鼻炎的人。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/18.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">粉末緑茶</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #C0C3DA;background-color: #C0C3DA;">粉末茶</li>
+									<li style="border-color: #B6DDE3;background-color: #B6DDE3;">水出し可</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							制作粉末绿茶叶的茶。
+							因为它易于融化，所以在炎热的天气里浇水也很好。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/19.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">粉末緑茶スティック</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #C0C3DA;background-color: #C0C3DA;">粉末茶</li>
+									<li style="border-color: #B6DDE3;background-color: #B6DDE3;">水出し可</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥700 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							粉状绿茶，一棒。
+							它很难变质并且携带方便。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/20.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">知覧ぷれみあむ緑茶ティーバッグ</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color:#C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+									<li style="border-color: #E1CAA2;background-color: #E1CAA2;">ティーバッグ</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥700 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							深蒸绿茶袋类型，携带方便。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/21.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">知覧ぷれみあむほうじ茶ティーバッグ</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #E1CAA2;background-color: #E1CAA2;">ティーバッグ</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥500 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							茶袋式hoji茶便于携带。
+						</div>
+					</div>
+				</li>
+				<li class="li_gift li_hukamushi-cha">
+					<div class="detailshead">
+						<img src="Commodity/img/22.jpg" width="320px" height="311px"/>
+						<div class="love">
+							<div class="love1"></div>
+							<div class="love2"></div>
+							<div class="love3"></div>
+						</div>
+					</div>
+					<div class="detailstail">
+						<p class="title__container">知覧ぷれみあむ和紅茶ティーバッグ</p>
+						<div class="info__container">
+							<div class="tags__wrapper">
+								<ul class="tags">
+									<li style="border-color: #E1CAA2;background-color: #E1CAA2;">ティーバッグ</li>
+								</ul>
+							</div>
+							<div class="price">
+								<p>¥600 + tax</p>
+							</div>
+						</div>
+						<div class="description__container">
+							便于携带的茶包型日本茶。
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--尾部-->
+		<div id="afterbody">
+			<div class="tieku">
+				<span>ホーム</span>
+				<img src="Commodity/img/arrow_bread.svg" />
+				<span>商品のご案内</span>
+			</div>
+			<div class="site">
+				<img src="Commodity/img/捕获.PNG" width="80px" height="80px"/>
+				<p class="sitep1">鹿児島県南九州市知覧町郡17385</p>
+				<p class="sitep2">TEL : +81(0)993-83-2851</p>
+				<p class="sitep3">17385 Kori, Chirancho, Minamikyushu-shi, kagoshima, Japan 897-0302</p>
+			</div>
+		</div>
+		<!--侧部导航-->
+		<div id="navigaion">
+			<img src="img/mengsjah.svg" width="200px" height="140px" id="imgement"/>
+			<div id="shopping">
+				<span>
+					网上商店
+				</span>
+				<img src="img/お茶のはまだ.svg" width="25px" height="25px"/>
+			</div>
+			<div id="click1" onclick="homecleck1()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="click2" onclick="homecleck2()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="xiaomenu">
+				<ul>
+					<li id="1" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_products.svg"/>
+					</li>
+					<li id="2" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_honto.svg"/>
+					</li>
+					<li id="3" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_leaf.svg"/>
+					</li>
+					<li id="4" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_blend.svg"/>
+					</li>
+					<li id="5" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_tashinamu.svg"/>
+					</li>
+					<li id="6" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_info.svg"/>
+					</li>
+					<li id="7" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_shop.svg"/>
+					</li>
+					<li id="8" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_contact.svg"/>
+					</li>
+				</ul>
+			</div>
+			<p id="pname">©HAMADA&nbsp;TEA。</p>
+			<div id="named" onclick="javascript:this.className='namedhide'" onmouseover="javascript:this.lastElementChild.className='nameddisplay2'" onmouseout="javascript:this.lastElementChild.className='namedhide2'">
+				<a href="#marker">
+					<p>Page top</p>
+					<div></div>
+				</a>
+			</div>
+		</div>
+		<script src="Commodity/js/Commodity.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			window.onload=function(){
+			 //出场特效
+			  document.getElementsByClassName("imglogo")[0].style.animation="chuchangimg1 1s linear";
+			  setTimeout("chuchang()",1000);
+			  setTimeout("chuchang1()",2000);
+			  setTimeout("chuchang2()",3000);
+			}
+			function chuchang(){
+				document.getElementById('wire').style.display="block";
+				document.getElementById('wire').style.animation='chuchangwire 1s linear';
+			}
+			function chuchang1(){
+				document.getElementById("menutitle").style.display="block";
+				document.getElementById("menuber").style.display="block";
+			  	document.getElementById("menutitle").style.animation="chuchangmenutitle 1s linear";
+			  	document.getElementById("menuber").style.animation="chuchangmenuber 1s linear";
+			}
+			function chuchang2(){
+				document.getElementById("goods").style.display="block";
+				document.getElementById("goods").style.animation="chuchanggoods 1s linear";
+			}
+		</script>
+	</body>
+</html>

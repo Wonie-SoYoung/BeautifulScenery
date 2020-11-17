@@ -1,0 +1,396 @@
+#content{
+	position: absolute;
+	height: 350px;
+	width: 1456px;
+}
+#menutitle{
+	position: relative;
+	top: 145px;
+	left: 180px;
+	display: none;
+}
+#menutitle span:first-of-type{
+	font-size: 34px;
+	/*font-family:  "STZhongsong";*/
+	font-family: "STSong";
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+#menutitle span:last-of-type{
+	font-size: 15px;
+	font-family: "Georgia";
+	margin-left: 5px;
+}
+#wire{
+	border-left: 1px solid #5D6666;
+	position: absolute;
+	height: 270px;
+	top: 0px;
+	left: 40%;
+	display: none;
+}
+#menuber{
+	position: relative;
+	left: 45%;
+	top: 80px;
+	width: 640px;
+	height: 130px;
+	display: none;
+}
+#arrow{
+	position: absolute;
+	top: 30px;
+	left: -4px;
+}
+#arrow .arrow1{
+	border-bottom: 1px solid;
+	width: 8px;
+	position: relative;
+	top: 2.5px;
+	left: 5px;
+	border-color: #63AF8C;
+}
+#arrow .arrow2{
+	position: relative;
+	left: 10px;
+	border-top: 1px solid;
+	width: 4px;
+	border-color: #63AF8C;
+	transform: skew(-45deg,40deg);
+	-webkit-transform: skew(-45deg,40deg);
+	-moz-transform: skew(-45deg,40deg);
+	-o-transform: skew(-45deg,40deg);
+}
+#arrow .arrow3{
+	position: relative;
+	left: 10px;
+	border-right: 1px solid;
+	height: 4px;
+	width: 1px;
+	border-color: #63AF8C;
+	transform: skew(-45deg,40deg);
+	-webkit-transform: skew(-45deg,40deg);
+	-moz-transform: skew(-45deg,40deg);
+	-o-transform: skew(-45deg,40deg);
+}
+#Basedonthetea{
+	position: absolute;
+	top: -15px;
+}
+#Basedonthetea:hover{
+	cursor: pointer;
+}
+#Basedonthetea span:first-of-type{
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #101820;
+}
+#Basedonthetea span:last-of-type{
+	font-family: "微软雅黑";
+	letter-spacing: 1px;
+	font-size: 9px;
+	color: #63AF8C;
+	border-bottom:1px dotted ;
+	position: relative;
+	left: 17px;
+}
+#gps{
+	position: relative;
+	left: 100px;
+	top: -20px;
+}
+#gps ul li{
+	list-style-type: none;
+	border: 1px solid;
+	float: left;
+	width: 160px;
+	height: 25px;
+	margin-left: 5px;
+	margin-top: 5px;
+	border-radius: 3px;
+	border-color: #5D6666;
+}
+#gps ul li:hover{
+	cursor: pointer;
+}
+#gps ul li span{
+	color: #5D6666;
+	font-size: 11px;
+	margin-left: 15px;
+}
+#gps ul li .tick{
+	position: relative;
+	left: 145px;
+	top: -7px;
+}
+#gps ul li div div:first-of-type{
+	border-bottom: 1px solid;
+	width: 5px;
+	border-color:#DEDEDE ;
+	transform: skew(-45deg,40deg);
+	-webkit-transform: skew(-45deg,40deg);
+	-moz-transform: skew(-45deg,40deg);
+	-o-transform: skew(-45deg,40deg);
+}
+#gps ul li div div:last-of-type{
+	position: relative;
+	top: -6px;
+	left: 6px;
+	border-right: 1px solid;
+	width: 1px;
+	height: 6px;
+	border-color:#DEDEDE ;
+	transform: skew(-45deg,40deg);
+	-webkit-transform: skew(-45deg,40deg);
+	-moz-transform: skew(-45deg,40deg);
+	-o-transform: skew(-45deg,40deg);
+}
+#Cuttingline{
+	border-bottom: 1px dotted;
+	position: relative;
+	top: 65px;
+}
+#toolber{
+	position: absolute;
+	top: 80px;
+}
+#toolber span{
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #101820;
+}
+#toolber ul{
+	position: relative;
+	top: -43px;
+	left: 220px;
+}
+#toolber ul li{
+	list-style-type: none;
+	border: 1px solid;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+	border-radius: 3px;
+	border-color: #5D6666;
+	color: #5D6666;
+	font-size: 11px;
+	padding: 2px 4px;
+	font-weight: 600;
+}
+#toolber ul li:hover{
+	cursor: pointer;
+	color: #b4b9b9;
+}
+/*鼠标悬停到棕色插图实现变色及小箭头向前特效*/
+@-webkit-keyframes arrowhover{
+	0%{transform: translateX(0px);}
+	100%{transform: translateX(5px);}
+}
+@-webkit-keyframes arrowleave{
+	0%{transform: translateX(5px);}
+	100%{transform: translateX(0px);}
+}
+.arrowhover{
+	animation: arrowhover 0.5s linear forwards;
+	-webkit-animation:arrowhover 0.5s linear forwards;
+	-moz-animation:arrowhover 0.5s linear forwards;
+	-o-animation:arrowhover 0.5s linear forwards;
+}
+.arrowleave{
+	animation: arrowleave 0.5s linear forwards;
+	-webkit-animation:arrowleave 0.5s linear forwards;
+	-moz-animation:arrowleave 0.5s linear forwards;
+	-o-animation:arrowleave 0.5s linear forwards;
+}
+
+
+#goods{
+	width: 1300px;
+	position: absolute;
+	top: 230px;
+	left: 66px;
+	display: none;
+}
+#product__wrapper_ul .li_hukamushi-cha{
+	width: 320px;
+	height: 450px;
+	list-style-type: none;
+	float: left;
+	margin-left: 75px;
+	margin-top: 100px;
+	position: relative;
+}
+#product__wrapper_ul .li_hukamushi-cha:hover{
+	cursor: pointer;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailshead{
+	height: 320px;
+	width: 320px;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailshead .love{
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: -50px;
+	left: 270px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+#product__wrapper_ul .li_hukamushi-cha .detailshead .love .love1{
+	position: absolute;
+	top: 0px;
+	left: 7px;
+	border-top: 1px solid #B4B4B4;
+	border-right: 1px solid #B4B4B4;
+	border-left: 1px solid #B4B4B4;
+	width: 13px;
+	height: 8px;
+	border-radius: 9px 9px 0 0;
+	z-index: 3;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailshead .love .love2{
+	position: absolute;
+	left: 0px;
+	top: 7px;
+	border-top: 1px solid #B4B4B4;
+	border-left: 1px solid #B4B4B4;
+	border-bottom: 1px solid #B4B4B4;
+	width: 8px;
+	height: 13px;
+	border-radius: 9px 0 0 9px;
+	z-index: 1;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailshead .love .love3{
+	position: absolute;
+	left: 8px;
+	top: 8px;
+	border-bottom: 1px solid #B4B4B4;
+	border-right: 1px solid #B4B4B4;
+	width: 13px;
+	height: 13px;
+	z-index: 2;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailstail{
+	position: relative;
+	top: 5px;
+	
+}
+#product__wrapper_ul .li_hukamushi-cha .detailstail .title__container{
+    font-family:  "Microsoft JhengHei";
+	color: inherit;
+	font-weight:400;
+	font-size: 19px;
+	color:#101820;
+	letter-spacing: 1.5px;
+	margin-bottom: 12px;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailstail .info__container{
+	position: relative;
+	height: 35px;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailstail .info__container .tags__wrapper .tags{
+	position: relative;
+	left: -45px;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailstail .info__container .tags__wrapper .tags li{
+	list-style-type: none;
+	border: 1px solid;
+	float: left;
+	margin-left: 5px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	font-size: 11px;
+	padding: 2px 4px;
+	font-weight: 600;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailstail .info__container .price p{
+	position: absolute;
+	bottom: 0px;
+	right:10px ;
+}
+#product__wrapper_ul .li_hukamushi-cha .detailstail .info__container .price p{
+	font-weight: 400;
+	font-size: 13px;
+	color: #101820;
+	font-family:  "Microsoft JhengHei";
+}
+#product__wrapper_ul .li_hukamushi-cha .detailstail .description__container{
+	font-size: 14px;
+	font-family: "STXihei";
+	font-weight: 500;
+	color: #101820;
+}
+/*悬停li爱心特效*/
+@-webkit-keyframes closespan1{
+	0%{right: 35px; opacity: 1;}
+	100%{right: 25px; opacity: 0;}
+}
+@-webkit-keyframes openspan1{
+	0%{right: 25px; opacity: 0;}
+	100%{right: 35px; opacity: 1;}
+}
+.openspan1{
+	-webkit-animation:openspan1 0.5s linear forwards;
+	-moz-animation:openspan1 0.5s linear forwards;
+	-o-animation:openspan1 0.5s linear forwards;
+}
+.closespan1{
+	-webkit-animation:closespan1 0.5s linear forwards;
+	-moz-animation:closespan1 0.5s linear forwards;
+	-o-animation:closespan1 0.5s linear forwards;
+}
+#afterbody{
+	position: absolute;
+	bottom: -4070px;
+	width: 100%;
+}
+#afterbody .tieku{
+	border-top: 1px solid;
+	border-bottom:1px solid ;
+	position: relative;
+	padding: 15px;
+	border-color: #DEDEDE;
+}
+#afterbody .tieku span:first-of-type{
+	color: #808080;
+	font-size: 12px;
+	padding-left: 60px;
+}
+#afterbody .tieku span:last-of-type{
+	color: #808080;
+	font-size: 12px;
+}
+#afterbody .tieku img{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#afterbody .site{
+	position: absolute;
+	top: 120px;
+	left: 33%;
+}
+#afterbody .site img{
+	margin-left: 200px;
+}
+#afterbody .site .sitep1{
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	margin-left: 120px;
+	margin-bottom: -10px;
+	margin-top: 30px;
+}
+#afterbody .site .sitep2{
+	font-size: 14px;
+	margin-left: 160px;
+	font-weight: 500;
+	font-family: "Times New Roman" ;
+}
+#afterbody .site .sitep3{
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-family: "Verdana";
+	margin-bottom: 50px;
+}

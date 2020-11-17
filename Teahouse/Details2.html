@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="Deteils/css/Details.css"/>
+		<link rel="stylesheet" type="text/css" href="Deteils/css/Details2.css"/>
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<!--左侧主要内容-->
+		<div id="leftcontent">
+			<img src="Deteils/img/logo.PNG" width="50px" height="50px" class="imglogo" onclick="javascript:window.location.href='Home_page.html'" onmouseover="javascript:this.style.cursor='pointer'"/>
+			<div class="classify">
+				<div class="package" onmouseover="menuhover(this)" onmouseout="menuleave(this)" onclick="divclick1(this)">
+					<div></div>
+					<p>Package</p>
+				</div>
+				<div class="howto" onmouseover="menuhover(this)" onmouseout="menuleave(this)" onclick="divclick2(this)">
+					<div></div>
+					<p>How to drink</p>
+				</div>
+			</div>
+			<img src="Deteils/img/c22.jpg" id="shangping"/>
+			<img src="Deteils/img/menu.png"  id="hecha"/>
+		</div>
+		<!--右侧主要内容-->
+		<div id="rightcontent">
+			<div id="header">
+				<img src="Deteils/img/jjj.png" width="17px" height="15px" class="jianto1"/>
+				<img src="Deteils/img/wqe.png" width="20px" height="17px" class="mofang"/>
+				<img src="Deteils/img/kksj.png" width="17px" height="15px" class="jianto2"/>
+			</div>
+			<div id="information">
+				<div id="zhedie">
+					<div class="detailshead">
+						<p>特上知覧茶</p>
+						<p>Tokujo</p>
+						<img src="Deteils/img/aixin.png"/>
+					</div>
+					<div class="ul_li_nr">
+						<ul>
+							<li style="border-color: #EBB9AA;background-color: #EBB9AA;">人気</li>
+							<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+							<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+						</ul>
+						<p class="pname">
+							<br/>在稀有品种中，我们豪华地使用优质茶叶。我正在用低热量烘烤，这样我就可以享受多彩的淡蓝色。
+						</p>
+						<div class="price">
+							<p>内容&nbsp;&nbsp;&nbsp;&nbsp;100克</p>
+							<p>价格&nbsp;&nbsp;&nbsp;&nbsp;¥2,000 +税</p>
+							<img src="Deteils/img/a22.jpg" width="100px"/>
+						</div>
+					</div>
+					<div class="jiaru" onmouseover="shophover(this)" onmouseout="shoplaster(this)">
+						<div></div>
+						<img src="Deteils/img/下载.png" width="300px"/>
+					</div>
+					<div class="weidao">
+						<p>味道</p>
+						<p>味道辛辣，味道清爽，但是身体很好，回味悠长。非常适合奖励给您，为亲人送礼，为游客提供热情款待。</p>
+						<img src="Deteils/img/b22.png" width="250px" height="260px"/>
+					</div>
+					<div class="typeshop">
+						<p>主要混合茶叶</p>
+						<ul>
+							<li>薮北茶</li>
+							<li>即使是绿色</li>
+							<li>Yutaka Green</li>
+							<li>晨露</li>
+							<li>Asanoka</li>
+							<li style="color: #63AF8C; border-color: #63AF8C;">Okumidori</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--尾部主要内容-->
+		<div id="afterbody">
+			<div class="tieku">
+				<span>ホーム</span>
+				<img src="Commodity/img/arrow_bread.svg" />
+				<span>Pole Foundation Brown</span>
+			</div>
+			<div class="site">
+				<img src="Commodity/img/捕获.PNG" width="80px" height="80px"/>
+				<p class="sitep1">鹿児島県南九州市知覧町郡17385</p>
+				<p class="sitep2">TEL : +81(0)993-83-2851</p>
+				<p class="sitep3">17385 Kori, Chirancho, Minamikyushu-shi, kagoshima, Japan 897-0302</p>
+			</div>
+		</div>
+		<!--侧菜单列表-->
+		<div  id="navigaion">
+			<img src="img/mengsjah.svg" width="200px" height="140px" id="imgement"/>
+			<div id="shopping">
+				<span>
+					网上商店
+				</span>
+				<img src="img/お茶のはまだ.svg" width="25px" height="25px"/>
+			</div>
+			<div id="click1" onclick="homecleck1()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="click2" onclick="homecleck2()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="xiaomenu">
+				<ul>
+					<li id="1" onmouseover="hover(this)" onmouseout="leaver(this)"  onclick="javascript:window.location.href='Commodity.html'">
+						<div></div>
+						<img src="img/menu_products.svg"/>
+					</li>
+					<li id="2" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_honto.svg"/>
+					</li>
+					<li id="3" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_leaf.svg"/>
+					</li>
+					<li id="4" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_blend.svg"/>
+					</li>
+					<li id="5" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_tashinamu.svg"/>
+					</li>
+					<li id="6" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_info.svg"/>
+					</li>
+					<li id="7" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_shop.svg"/>
+					</li>
+					<li id="8" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_contact.svg"/>
+					</li>
+				</ul>
+			</div>
+			<p id="pname">©HAMADA&nbsp;TEA。</p>
+		</div>
+		<script src="Deteils/js/Details.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function menuhover(menu){
+				if(document.defaultView.getComputedStyle(menu.firstElementChild,null).width!="32px"){
+					menu.firstElementChild.className="menuhover";
+					menu.lastElementChild.className="phover";
+				}
+			}
+			function menuleave(menu){
+				if(document.defaultView.getComputedStyle(menu.firstElementChild,null).width!="32px"){
+					menu.firstElementChild.className="menuleaver";
+					menu.lastElementChild.className="pleaver";
+				}
+			}
+			function divclick1(menu){
+				if(document.defaultView.getComputedStyle(menu.firstElementChild,null).width!="32px"){
+					menu.firstElementChild.className="menuclick";
+					menu.lastElementChild.className="pclick";
+					menu.nextElementSibling.firstElementChild.className="menucall";
+					menu.nextElementSibling.lastElementChild.className="pcall";
+					document.getElementById("shangping").className="imgdisplay";
+					document.getElementById("hecha").className="imghide";
+				}
+			}
+			function divclick2(menu){
+				if(document.defaultView.getComputedStyle(menu.firstElementChild,null).width!="32px"){
+					menu.firstElementChild.className="menuclick";
+					menu.lastElementChild.className="pclick";
+					menu.previousElementSibling.firstElementChild.className="menucall";
+					menu.previousElementSibling.lastElementChild.className="pcall";
+					document.getElementById("shangping").className="imghide";
+					document.getElementById("hecha").className="imgdisplay";
+				}
+			}
+			
+		</script>
+	</body>
+</html>

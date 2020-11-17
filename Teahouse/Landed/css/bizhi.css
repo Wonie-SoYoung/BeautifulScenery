@@ -1,0 +1,160 @@
+@-webkit-keyframes backimg1-2{
+	0%{background-image: url(../img/story-bg-1.jpg);}
+	100%{background-image: url(../img/story-bg-2.jpg);}
+}
+@-webkit-keyframes backimg1-3{
+	0%{background-image: url(../img/story-bg-1.jpg);}
+	100%{background-image: url(../img/story-bg-3.jpg);}
+}
+@-webkit-keyframes backimg1-4{
+	0%{background-image: url(../img/story-bg-1.jpg);}
+	100%{background-image: url(../img/story-bg-4.jpg);}
+}
+.backimg1-2{
+	animation: backimg1-2 1s linear forwards;
+	-webkit-animation:backimg1-2 1s linear forwards;
+	-moz-animation:backimg1-2 1s linear forwards;
+	-o-animation:backimg1-2 1s linear forwards;
+}
+.backimg1-3{
+	animation: backimg1-3 1s linear forwards;
+	-webkit-animation:backimg1-3 1s linear forwards;
+	-moz-animation:backimg1-3 1s linear forwards;
+	-o-animation:backimg1-3 1s linear forwards;
+}
+.backimg1-4{
+	animation: backimg1-4 1s linear forwards;
+	-webkit-animation:backimg1-4 1s linear forwards;
+	-moz-animation:backimg1-4 1s linear forwards;
+	-o-animation:backimg1-4 1s linear forwards;
+}
+@-webkit-keyframes backimg2-1{
+	0%{background-image: url(../img/story-bg-2.jpg);}
+	100%{background-image: url(../img/story-bg-1.jpg);}
+}
+@-webkit-keyframes backimg2-3{
+	0%{background-image: url(../img/story-bg-2.jpg);}
+	100%{background-image: url(../img/story-bg-3.jpg);}
+}
+@-webkit-keyframes backimg2-4{
+	0%{background-image: url(../img/story-bg-2.jpg);}
+	100%{background-image: url(../img/story-bg-4.jpg);}
+}
+.backimg2-1{
+	animation: backimg2-1 1s linear forwards;
+	-webkit-animation:backimg2-1 1s linear forwards;
+	-moz-animation:backimg2-1 1s linear forwards;
+	-o-animation:backimg2-1 1s linear forwards;
+}
+.backimg2-3{
+	animation: backimg2-3 1s linear forwards;
+	-webkit-animation:backimg2-3 1s linear forwards;
+	-moz-animation:backimg2-3 1s linear forwards;
+	-o-animation:backimg2-3 1s linear forwards;
+}
+.backimg2-4{
+	animation: backimg2-4 1s linear forwards;
+	-webkit-animation:backimg2-4 1s linear forwards;
+	-moz-animation:backimg2-4 1s linear forwards;
+	-o-animation:backimg2-4 1s linear forwards;
+}
+@-webkit-keyframes backimg3-1{
+	0%{background-image: url(../img/story-bg-3.jpg);}
+	100%{background-image: url(../img/story-bg-1.jpg);}
+}
+@-webkit-keyframes backimg3-2{
+	0%{background-image: url(../img/story-bg-3.jpg);}
+	100%{background-image: url(../img/story-bg-2.jpg);}
+}
+@-webkit-keyframes backimg3-4{
+	0%{background-image: url(../img/story-bg-3.jpg);}
+	100%{background-image: url(../img/story-bg-4.jpg);}
+}
+.backimg3-1{
+	animation: backimg3-1 1s linear forwards;
+	-webkit-animation:backimg3-1 1s linear forwards;
+	-moz-animation:backimg3-1 1s linear forwards;
+	-o-animation:backimg3-1 1s linear forwards;
+}
+.backimg3-2{
+	animation: backimg3-2 1s linear forwards;
+	-webkit-animation:backimg3-2 1s linear forwards;
+	-moz-animation:backimg3-2 1s linear forwards;
+	-o-animation:backimg3-2 1s linear forwards;
+}
+.backimg3-4{
+	animation: backimg3-4 1s linear forwards;
+	-webkit-animation:backimg3-4 1s linear forwards;
+	-moz-animation:backimg3-4 1s linear forwards;
+	-o-animation:backimg3-4 1s linear forwards;
+}
+@-webkit-keyframes backimg4-1{
+	0%{background-image: url(../img/story-bg-4.jpg);}
+	100%{background-image: url(../img/story-bg-1.jpg);}
+}
+@-webkit-keyframes backimg4-2{
+	0%{background-image: url(../img/story-bg-4.jpg);}
+	100%{background-image: url(../img/story-bg-2.jpg);}
+}
+@-webkit-keyframes backimg4-3{
+	0%{background-image: url(../img/story-bg-4.jpg);}
+	100%{background-image: url(../img/story-bg-3.jpg);}
+}
+.backimg4-1{
+	animation: backimg4-1 1s linear forwards;
+	-webkit-animation:backimg4-1 1s linear forwards;
+	-moz-animation:backimg4-1 1s linear forwards;
+	-o-animation:backimg4-1 1s linear forwards;
+}
+.backimg4-2{
+	animation: backimg4-2 1s linear forwards;
+	-webkit-animation:backimg4-2 1s linear forwards;
+	-moz-animation:backimg4-2 1s linear forwards;
+	-o-animation:backimg4-2 1s linear forwards;
+}
+.backimg4-3{
+	animation: backimg4-3 1s linear forwards;
+	-webkit-animation:backimg4-3 1s linear forwards;
+	-moz-animation:backimg4-3 1s linear forwards;
+	-o-animation:backimg4-3 1s linear forwards;
+}
+
+/*菜单显示特效*/
+@-webkit-keyframes kaishi-yidong{
+	0%{transform: translateY(0);}
+	100%{transform: translateY(-380px);}
+}
+@-webkit-keyframes jieshu-yidong{
+	0%{transform: translateY(-380px);}
+	100%{transform: translateY(0px);}
+}
+.kaishi-yidong{
+	animation: kaishi-yidong 3s linear forwards;
+	-webkit-animation:kaishi-yidong 3s linear forwards;
+	-moz-animation:kaishi-yidong 3s linear forwards;
+	-o-animation:kaishi-yidong 3s linear forwards;
+}
+.jieshu-yidong{
+	-webkit-animation:jieshu-yidong 0.5s linear forwards;
+	-moz-animation:jieshu-yidong 0.5s linear forwards;
+	-o-animation:jieshu-yidong 0.5s linear forwards;
+}
+@-webkit-keyframes kaishi-shosuo{
+	0%{height: 0px;opacity: 0;}
+	100%{height: 75%; opacity: 1;}
+}
+@-webkit-keyframes jieshu-shosuo{
+	0%{height: 75%; opacity: 1;}
+	100%{height: 0px; opacity: 0;}
+}
+.kaishi-shosuo{
+	animation: kaishi-shosuo 0.5s linear forwards;
+	-webkit-animation:kaishi-shosuo 0.5s linear forwards;
+	-moz-animation:kaishi-shosuo 0.5s linear forwards;
+	-o-animation:kaishi-shosuo 0.5s linear forwards;
+}
+.jieshu-shosuo{
+	-webkit-animation:jieshu-shosuo 0.5s linear forwards;
+	-moz-animation:jieshu-shosuo 0.5s linear forwards;
+	-o-animation:jieshu-shosuo 0.5s linear forwards;
+}

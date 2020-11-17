@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="Landed/css/bizhi.css"/>
+		<link rel="stylesheet" type="text/css" href="Landed/css/logo_in.css">
+		<style type="text/css">
+			body{
+				width: 100%;
+				height: 100%;
+				overflow-x:hidden ;
+				overflow-y: hidden;
+				padding: 0; margin: 0; 
+				background-image: url(Landed/img/story-bg-1.jpg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			#menu{
+				width: 450px;
+				height: 560px;
+				position: relative;
+				top: 100px;
+				left: 20px;
+			}
+			#menu div:hover{
+				cursor: pointer;
+			}
+			#menu .mei{
+				width: 200px;
+				height: 200px;
+				float: left;
+				margin-left: 10px;
+				margin-bottom: 10px;
+				background-color: rgba(255,255,255,0.3);
+				}
+			/*#menu .mei:hover{
+				animation: menuhover 0.2s linear forwards;
+				-webkit-animation:menuhover 0.2s linear forwards;
+				-moz-animation:menuhover 0.2s linear forwards;
+				-o-animation:menuhover 0.2s linear forwards;
+			}*/
+			#menu .biaoti{
+				width: 411px;
+				height: 137px;
+				position: relative;
+				left: 10px;
+				margin-bottom: 15px;
+				background-color: rgba(255,255,255,0.3);
+			}
+			#menu .mei p{
+				border: 1px solid;
+				width: 178px;
+				height: 178px;
+				margin-left: 10px;
+				margin-top: 10px;
+				text-align: center;
+				line-height: 178px;
+				color: #FFFFFF;
+				font-size: 30px;
+				font-family: inherit ;
+				font-weight: lighter;
+				box-sizing: inherit;
+				font-style: oblique;
+				letter-spacing: 1px;
+			}
+			#menu .biaoti p{
+				border: 1px solid;
+				width: 390px;
+				height: 115px;
+				text-align: center;
+				line-height: 117px;
+				color: #FFFFFF;
+				position: relative;
+				top: 10px;
+				left: 9px;
+				font-size: 55px;
+				font-family:inherit;
+				font-style: italic;
+				font-weight: lighter;
+				box-sizing: inherit;
+				letter-spacing: 1px;
+			}
+			/*悬停点击菜单动画*/
+			@-webkit-keyframes menuhover{
+				0%{background-color: rgba(255,255,255,0.3);}
+				100%{background-color: rgba(255,255,255,0.6);}
+			}
+			@-webkit-keyframes menuleave{
+				0%{background-color: rgba(255,255,255,0.6);}
+				100%{background-color: rgba(255,255,255,0.3);}
+			}
+			
+			/*About the story 故事*/
+			#content{
+				height: 500px;
+				width: 700px;
+				position: absolute;
+				top: 30%;
+				right: 0px;
+				border-radius: 50px;
+			}
+			#content1{
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+			#content1 .goshititle{
+				width: 600px;
+				height: 95px;
+				position: absolute;
+				left: 50px;
+				background-color: rgba(0,0,0,0.5);
+				top: 380px;
+				z-index: 9;
+			}
+			#content1 .goshititle:hover{
+				cursor: pointer;
+			}
+			#content1 .goshititle p{
+				width: 555px;
+				height: 75px;
+				position: absolute;
+				border: 1px solid #FFFFFF;
+				left: 10px;
+				top: -25px;
+				color: #FFFFFF;
+				font-size: 35px;
+				font-family:inherit;
+				font-style: italic;
+				font-weight: lighter;
+				letter-spacing: 1px;
+				line-height: 75px;
+				padding-left: 25px;
+			}
+			#content1 .tale{
+				width: 86%;
+				height: 75%;
+				position: absolute;
+				left: 50px;
+				bottom: 20px;
+				overflow-x:hidden;
+				background-color: #FFFFFF;
+				opacity: 0;
+			}
+			.tale .first{
+				width: 550px;
+				position: relative;
+				top: 30px;
+				left: 25px;
+			}
+			.tale .first p:first-of-type{
+				position: absolute;
+				right: 30px;
+				top: 0px;
+				font-size: 20px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				border-bottom:  1px solid;
+				padding-left: 80px;
+			}
+			.tale .first p span{
+				font-size: 40px;
+				color: #C9D291;
+			}
+			.tale .first p:last-of-type{
+				position: absolute;
+				right: 130px;
+				top: 50px;
+				font-size: 20px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				padding-left: 80px;
+			}
+			.tale .first .test1{
+				position: absolute;
+				top: 150px;
+				right: 0px;
+				font-size: 15px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+			}
+			.tale .second{
+				width: 550px;
+				position: relative;
+				top: 50px;
+				left: 25px;
+			}
+			.tale .second p:first-of-type{
+				position: relative;
+				width: 120px;
+				left: 90px;
+				top: 0px;
+				font-size: 20px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				border-bottom:  1px solid;
+			}
+			.tale .second p span{
+				font-size: 40px;
+				color: #C9D291;
+			}
+			.tale .second p:last-of-type{
+				font-size: 20px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				padding-left: 90px;
+				margin-top: -10px;
+			}
+			.tale .second .test2{
+				position: relative;
+				left: 200px;
+				top: -80px;
+				font-size: 14px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				line-height: 18px;
+			}
+			.tale .third{
+				width: 550px;
+				position: relative;
+				top: 10px;
+				left: 25px;
+			}
+			.tale .third p:first-of-type{
+				position: relative;
+				width: 150px;
+				top: 0px;
+				font-size: 20px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				border-bottom:  1px solid;
+			}
+			.tale .third p span{
+				font-size: 40px;
+				color: #C9D291;
+			}
+			.tale .third p:last-of-type{
+				font-size: 12px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				margin-top: -10px;
+			}
+			
+			/*Production place 生产地方*/
+			#content2{
+				width: 100%;
+				height: 100%;
+				display: none;
+			}
+			#content2 .difangtitle{
+				width: 600px;
+				height: 95px;
+				position: absolute;
+				left: 50px;
+				top: 380px;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 9;
+			}
+			#content2 .difangtitle:hover{
+				cursor: pointer;
+			}
+			#content2 .difangtitle p{
+				width: 555px;
+				height: 75px;
+				position: absolute;
+				border: 1px solid #FFFFFF;
+				left: 10px;
+				top: -25px;
+				color: #FFFFFF;
+				font-size: 35px;
+				font-family:inherit;
+				font-style: italic;
+				font-weight: lighter;
+				letter-spacing: 1px;
+				line-height: 75px;
+				padding-left: 25px;
+			}
+			#content2 .tale2{
+				width: 86%;
+				height: 75%;
+				position: absolute;
+				left: 50px;
+				bottom: 20px;
+				overflow-x:hidden ;
+				background-color: #FFFFFF;
+				opacity: 0;
+			}
+			.tale2 .first{
+				width: 550px;
+				position: relative;
+				top: 30px;
+				left: 25px;
+			}
+			.tale2 .first p:first-of-type{
+				position: absolute;
+				left: 290px;
+				top: 0px;
+				font-size: 12px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				color: #C9D291;
+				font-weight: 600;
+			}
+			.tale2 .first p:first-of-type span{
+				font-size: 18px;
+			}
+			.tale2 .first p:last-of-type{
+				position: absolute;
+				left: 210px;
+				top: 50px;
+				font-size: 20px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				padding-left: 80px;
+				margin-top: -10px;
+				border-bottom: 1px solid;
+			}
+			.tale2 .first .test1{
+				position: absolute;
+				top: 100px;
+				right: 0px;
+				font-size: 15px;
+				font-family: "宋体";
+				letter-spacing: 2px;
+				line-height: 20px;
+			}
+			
+			.tale2 .second{
+				width: 550px;
+				position: relative;
+				top: 60px;
+				left: 25px;
+			}
+			.tale2 .second p:first-of-type{
+				position: absolute;
+				top: 0px;
+				font-size: 12px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				color: #C9D291;
+				font-weight: 600;
+			}
+			.tale2 .second p:first-of-type span{
+				font-size: 18px;
+			}
+			.tale2 .second p:last-of-type{
+				position: absolute;
+				left: 70px;
+				top: 50px;
+				font-size: 20px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				padding-right: 80px;
+				margin-top: -10px;
+				border-bottom: 1px solid;
+			}
+			.tale2 .second .test1{
+				position: absolute;
+				top: 100px;
+				left: 0px;
+				font-size: 13px;
+				font-family: "宋体";
+				letter-spacing: 2px;
+				line-height: 20px;
+			}
+			
+			.tale2 .three{
+				width: 550px;
+				position: relative;
+				top: 100px;
+				left: 25px;
+			}
+			.tale2 .three p:first-of-type{
+				position: absolute;
+				left: 280px;
+				top: 0px;
+				font-size: 12px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				color: #C9D291;
+				font-weight: 600;
+			}
+			.tale2 .three p:first-of-type span{
+				font-size: 18px;
+			}
+			.tale2 .three p:last-of-type{
+				position: absolute;
+				left: 200px;
+				top: 50px;
+				font-size: 20px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				padding-left: 80px;
+				margin-top: -10px;
+				border-bottom: 1px solid;
+			}
+			.tale2 .three .test1{
+				position: absolute;
+				top: 120px;
+				right: 30px;
+				font-size: 15px;
+				font-family: "宋体";
+				letter-spacing: 2px;
+				line-height: 25px;
+			}
+			
+			.tale2 .four{
+				width: 550px;
+				position: relative;
+				top: 140px;
+				left: 25px;
+			}
+			.tale2 .four p:first-of-type{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				font-size: 12px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				color: #C9D291;
+				font-weight: 600;
+			}
+			.tale2 .four p:first-of-type span{
+				font-size: 18px;
+			}
+			.tale2 .four p:last-of-type{
+				position: absolute;
+				left: 0px;
+				top: 50px;
+				font-size: 18px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				padding-right: 80px;
+				margin-top: -10px;
+				border-bottom: 1px solid;
+			}
+			.tale2 .four .test1{
+				position: absolute;
+				top: 80px;
+				left: 0px;
+				font-size: 12px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				line-height: 20px;
+			}
+			
+			/*喝茶方式*/
+			#content3{
+				width: 100%;
+				height: 115%;
+				background-color: #FFFFFF;
+				overflow-x:hidden ;
+				border-radius: 20px;
+				position: absolute;
+				top: -80px;
+				display: none;
+				opacity: 0.5;
+			}
+			#content3 .kaito p:first-of-type{
+				position: relative;
+				left: 20px;
+				top: 40px;
+				font-size: 18px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				line-height: 25px;
+			}
+			#content3 .kaito div{
+				border-left: 1px solid;
+				height: 140px;
+				position: absolute;
+				top: 0px;
+				left: 40%;
+			}
+			#content3 .kaito p:last-of-type{
+				position: relative;
+				left: 290px;
+				top: -30px;
+				font-size: 14px;
+				font-family: "宋体";
+				letter-spacing: 1px;
+				line-height: 25px;
+			}
+			#content3 .first{
+				position: absolute;
+				top: 170px;
+				border: 1px solid;
+				right: 200px;
+				width: 160px;
+				height: 190px;
+				border-radius: 10px;
+			}
+			#content3 .first img{
+				position: relative;
+				top: 20px;
+				left: 20px;
+			}
+			#content3 .first p:first-of-type{
+				position: absolute;
+				bottom: 20px;
+				font-size: 12px;
+				left: 50px;
+				font-family: "宋体";
+				color:#808080;
+			}
+			#content3 .first p:last-of-type{
+				position: absolute;
+				bottom: -5px;
+				font-size: 15px;
+				left: 45px;
+				font-family: "宋体";
+				font-weight: 600;
+			}
+			
+			#content3 .second{
+				position: absolute;
+				top: 170px;
+				border: 1px solid;
+				right: 20px;
+				width: 160px;
+				height: 190px;
+				border-radius: 10px;
+			}
+			#content3 .second img{
+				position: relative;
+				top: 20px;
+				left: 20px;
+			}
+			#content3 .second p:first-of-type{
+				position: absolute;
+				bottom: 20px;
+				font-size: 12px;
+				font-family: "宋体";
+				color:#808080;
+			}
+			#content3 .second p:last-of-type{
+				position: absolute;
+				bottom: -5px;
+				font-size: 15px;
+				left: 20px;
+				font-family: "宋体";
+				font-weight: 600;
+			}
+			
+			#content3 .three{
+				position: absolute;
+				top: 380px;
+				border: 1px solid;
+				right: 200px;
+				width: 160px;
+				height: 190px;
+				border-radius: 10px;
+			}
+			#content3 .three img{
+				position: relative;
+				top: 20px;
+				left: 20px;
+			}
+			#content3 .three p:first-of-type{
+				position: absolute;
+				bottom: 20px;
+				left: 30px;
+				font-size: 12px;
+				font-family: "宋体";
+				color:#808080;
+			}
+			#content3 .three p:last-of-type{
+				position: absolute;
+				bottom: -5px;
+				font-size: 15px;
+				left: 25px;
+				font-family: "宋体";
+				font-weight: 600;
+			}
+			
+			#content3 .four{
+				position: absolute;
+				top: 380px;
+				border: 1px solid;
+				right: 20px;
+				width: 160px;
+				height: 190px;
+				border-radius: 10px;
+			}
+			#content3 .four img{
+				position: relative;
+				top: 20px;
+				left: 20px;
+			}
+			#content3 .four p:first-of-type{
+				position: absolute;
+				bottom: 20px;
+				left: 40px;
+				font-size: 12px;
+				font-family: "宋体";
+				color:#808080;
+			}
+			#content3 .four p:last-of-type{
+				position: absolute;
+				bottom: -5px;
+				font-size: 15px;
+				left: 60px;
+				font-family: "宋体";
+				font-weight: 600;
+			}
+			#content4{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				display: none;
+			}
+			#content4 .denglu{
+				width: 600px;
+				height: 95px;
+				position: absolute;
+				left: 50px;
+				background-color: rgba(0,0,0,0.5);
+				top: 380px;
+				z-index: 9;
+			}
+			#content4 .denglu:hover{
+				cursor: pointer;
+			}
+			#content4 p{
+				width: 555px;
+				height: 75px;
+				position: absolute;
+				border: 1px solid #FFFFFF;
+				left: 8px;
+				top: -25px;
+				color: #FFFFFF;
+				font-size: 35px;
+				font-family:inherit;
+				font-style: italic;
+				font-weight: lighter;
+				letter-spacing: 1px;
+				line-height: 75px;
+				padding-left: 25px;
+				z-index: 99;
+			}
+		</style>
+		<style type="text/css">
+			@-webkit-keyframes chuchangmenu{
+				0%{transform: translateX(-450px);}
+				100%{transform: translateX(0px);}
+			}
+			.chuchangmenu{
+				animation: chuchangmenu 1s linear;
+				-webkit-animation:chuchangmenu 1s linear;
+				-moz-animation:chuchangmenu 1s linear;
+				-o-animation:chuchangmenu 1s linear;
+			}
+			@-webkit-keyframes chuchangyinyin{
+				0%{opacity: 1;}
+				100%{opacity: 0;}
+			}
+			.chuchangyinyin{
+				animation: chuchangyinyin 1s linear forwards;
+				-webkit-animation:chuchangyinyin 1s linear forwards;
+				-moz-animation:chuchangyinyin 1s linear forwards;
+				-o-animation:chuchangyinyin 1s linear forwards;
+			}
+			@-webkit-keyframes chuchangbody{
+				0%{background-image:url(Landed/img/story-bg-4.jpg);}
+				35%{background-image:url(Landed/img/story-bg-3.jpg);}
+				65%{background-image:url(Landed/img/story-bg-2.jpg);}
+				100%{background-image: url(Landed/img/story-bg-1.jpg);}
+			}
+			.chuchangbody{
+				animation: chuchangbody 0.05s linear forwards;
+				-webkit-animation:chuchangbody 0.05s linear forwards;
+				-moz-animation:chuchangbody 0.05s linear forwards;
+				-o-animation:chuchangbody 0.05s linear forwards;
+			}
+			#yinyin{
+				border: 1px solid;
+				width: 100%;
+				height: 110%;
+				background-color: #010101;
+				position: absolute;
+				z-index: 10;
+				top: -10px;
+				opacity: 1;
+			}
+		</style>
+	</head>r
+	<body>
+	<div id="yinyin">
+		
+	</div>
+		<div id="menu">
+			<div class="biaoti"><p>The Story</p></div>
+			<div class="mei" style="background-color: rgba(255,255,255,0.6);" onclick="bodyclick(this)" id="1"><p onmouseover="menuhover(this)" onmouseout="menuleave(this)" onclick="menuclick(this)" id="click" style="color: rgb(0,0,0);">About</p></div>
+			<div class="mei" onclick="bodyclick(this)" id="2"><p onmouseover="menuhover(this)" onmouseout="menuleave(this)" onclick="menuclick(this)" id="a">Place</p></div>
+			<div class="mei" onclick="bodyclick(this)" id="3"><p onmouseover="menuhover(this)" onmouseout="menuleave(this)" onclick="menuclick(this)" id="a">Services</p></div>
+			<div class="mei" onclick="bodyclick(this)" id="4"><p onmouseover="menuhover(this)" onmouseout="menuleave(this)" onclick="menuclick(this)" id="a">Account</p></div>
+		</div>
+		<div id="content">
+			<div id="content1">
+				<div class="goshititle" onclick="goshititleclick(this)"><p>About the story</p></div>
+				<div class="tale">
+					<div class="first">
+						<img src="Landed/img/img_blend_01_01.jpg" width="250px" height="300px"/>
+						<p><span>美</span>的味道秘密，并且是</p>
+						<p>位于中心组中</p>
+						<div class="test1">
+							每天经历的大部分茶都是所谓的<br/>
+							“混合茶”，有些混合了不同的茶叶。<br /> 
+							但它也常常享受只在所谓的“单品”，<br />
+							在世界茶叶咖啡品种单一豆，<br />
+							采取和谐共进了最好每个品种的，<br />
+							产生更丰富的味道和香气一般是的。 <br />
+						</div>
+					</div>
+					<div class="second">
+						<p><span>茶</span>工匠</p>
+						<p>"茶大师"</p>
+						<img src="Landed/img/img_blend_02_01.jpg" width="350px" height="250px" style="position: relative; left: 200px; top: -100px;"/>
+						<img src="Landed/img/img_blend_02_02.jpg" width="180px" height="300px" style="position: absolute; top: 130px; left: 0px;"/>
+						<div class="test2">
+							帝人是一个创造茶的工匠。根据季节和收获日期，<br />
+							茶叶的味道会有微妙的变化。由于存在味道没有变<br />
+							化贯穿全年，眼睛，调整鼻，舌，评估茶叶或般的<br />
+							质感，选择和品种的制剂特征。将它定制为茶叶，<br />
+							充分利用茶叶。全国约有700个茶道。由于决定茶<br />
+							的风味是重要的作用，因此决定了辨别眼睛的技能<br />
+							的阶段。只有13人获得了十个最高级别的认证。我<br />
+							在艰难的世界里继续完善这项工作。
+						</div>
+					</div>
+					<div class="third">
+						<p><span>样</span>品展示</p>
+						<p>领带后的茶叶再次确认是否混<br/>有异物。它将在之后包装并发货。</p>
+						<img src="Landed/img/img_blend_07_01_sp.jpg" width="350px" height="200px" style="position: relative; left: 200px; top: -60px;"/>
+					</div>
+				</div>
+			</div>
+			<div id="content2">
+				<div class="difangtitle"  onclick="difangtitleclick(this)"><p>Production place</p></div>
+				<div class="tale2">
+					<div class="first">
+						<img src="Landed/img/img_honto_01_01.jpg" width="250px" height="350px"/>
+						<p>真正感兴趣的茶第<span>1</span>部分</p>
+						<p>日本最好的茶叶生产</p>
+						<div class="test1">
+							在九州南部，温度差异强烈，雾气<br />
+							深的气候适合茶的种植。实际上它<br />
+							是日本自治市<span style="color: #B8DBC2;">最高产的绿茶生产地。</span><br />
+							（甚至在县内，鹿儿岛县是静冈县<br />
+							旁边的第2大产量）<br />
+							知览茶开始奖励农业，林业和渔业<br />
+							奖和全国茶叶展销会日本农业中心<br />
+							主席奖的部长，<span  style="color: #B8DBC2;">曾荣获各种奖项</span>，<br />
+							有品质和品味的成长性评价。
+						</div>
+					</div>
+					<div class="second">
+						<img src="Landed/img/img_honto_02_01.png" width="400px" height="300px" style="position: relative;left: 200px; top: -10px;"/>
+						<p>真正感兴趣的茶第<span>2</span>部分</p>
+						<p>丰富的品种</p>
+						<div class="test1">
+							据了解，我们利用火山灰的积累利用<br />
+							了肥沃的土地，并与其他来源相比，<br />
+							种植了许多品种的茶。<br />
+							混合（混合）的范围也通过独特的丰<br />
+							富茶叶扩大，您可以根据每个客户的<br />
+							喜好提供茶
+						</div>
+					</div>
+					<div class="three">
+						<img src="Landed/img/img_honto_03_01.png" width="250px" height="350px" />
+						<p>真正感兴趣的茶第<span>3</span>部分</p>
+						<p>彻底蒸“深蒸茶”</p>
+						<div class="test1">
+							大多数茶道都是名为“深蒸茶”的茶。<br />
+							在采茶后蒸的过程中，一般茶蒸煮时<br />
+							间为30秒至40秒，知览茶是蒸约2倍<br />
+							60秒80秒。通过蒸汽长时间抑制蒸汽<br />
+							，并且出现醇厚的丰富度。另外，由<br />
+							于叶子变得更细，在提取时，深绿色<br />
+							是美丽的，它适合作为用水提取的茶。
+						</div>
+					</div>
+					<div class="four">
+						<img src="Landed/img/img_honto_04_01.png" width="330px" height="230px" style="position: relative;left: 220px;"/>
+						<p>真<span>4</span>件茶道</p>
+						<p>现在，最重要的生产区域</p>
+						<div class="test1">
+							在茶道农民中，三十多岁的年轻一代双<br />
+							手合作，正致力于进一步改进和发展知<br />
+							识茶。从生产到计划和销售，仔细。茶<br />
+							业的传承进展顺利，有了工会的支持，<br />
+							整个九州南部城市都在不断进行耕作，<br />
+							稳定的茶叶生产。
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="content3">
+				<div class="kaito">
+					<p>喝茶方式<br/>Way of drinking tea</p>
+					<div></div>
+					<p>你知道的越多，茶的味道就越深。想通过寻找享受的方式了解<br />
+						更多关于茶的信息，更不用说正确的饮酒方式了吗？</p>
+				</div>
+				<img src="Landed/img/illust_tashianmu_top.png" width="300px" height="400px" style="position: relative; left: 10px;"/>
+				<div class="first">
+					<img src="Landed/img/illust_bottom_tashinamu_01.png" width="120px" height="120px"/>
+					<p>你多大了?</p>
+					<p><span style="font-weight: 400;">茶</span>的种类</p>
+				</div>
+				<div class="second">
+					<img src="Landed/img/illust_bottom_tashinamu_02.png" width="120px" height="120px"/>
+					<p>了解基础知识并了解你的偏好</p>
+					<p>任何进行酿造讲<span style="font-weight: 100;">座</span></p>
+				</div>
+				<div class="three">
+					<img src="Landed/img/illust_bottom_tashinamu_03.png" width="120px" height="120px"/>
+					<p>你可以随时喝美味</p>
+					<p>正确的存储<span style="font-weight: 100;">方法</span></p>
+				</div>
+				<div class="four">
+					<img src="Landed/img/illust_bottom_tashinamu_04.png" width="120px" height="120px"/>
+					<p>我本能的想教人</p>
+					<p><span style="font-weight: 100;">茶</span>琐事</p>
+				</div>
+			</div>
+			<div id="content4">
+				<div class="denglu"  onclick="dengluclick(this)"><p>Login or register</p></div>
+					<div class="wrapper">
+						<div class="container">
+							<h1>Welcome</h1>
+							
+							<form class="form" action="">
+								<input type="text" placeholder="Username" required pattern="\w{4,10}">
+								<input type="password" placeholder="Password" required maxlength="10" pattern="\d{4,10}">
+								<button id="login-button" onclick="login(this.parentNode)">Login</button>
+							</form>
+						</div>
+						<ul class="bg-bubbles">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<!--<script src="Landed/js/jquery-2.1.1.min.js" type="text/javascript"></script>-->
+		<script src="Landed/js/Landed.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				document.getElementById("menu").className="chuchangmenu";
+				document.body.className="chuchangbody";
+				document.getElementById("yinyin").className="chuchangyinyin";
+				document.getElementById("yinyin").style.zIndex="-9999";
+			}
+			function login(log){
+				var user=log.firstElementChild.value;
+				var pwd=log.firstElementChild.nextElementSibling.value;
+				if(user!="" && pwd!=""){
+					if(isNaN(pwd)!=true){
+						if(user=="aqwo" && pwd=="5285"){
+							document.getElementsByClassName("form")[0].action="Home_page.html";
+						}else{
+							alert("用户名或密码错误！")
+						}
+					}else{
+						alert("密码必须是整数！");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

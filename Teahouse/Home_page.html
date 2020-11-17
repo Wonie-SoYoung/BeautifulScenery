@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>茶还在</title>
+		<link rel="stylesheet" type="text/css" href="HomeFile/css/Home_page.css"/>
+		<style>
+			#content{
+				width: 95%;
+				height: 100%;
+				position: absolute;
+			}
+			#titles{
+				position: absolute;
+				left: 32%;
+				bottom: 110px;
+				display: none;
+			}
+			#titles span:nth-child(1){
+				font-size:36px ;
+				font-family:"新宋体";
+				font-weight: 550;
+				letter-spacing: 5px;
+			}
+			#titles span:nth-child(2){
+				position: relative;
+				top: 20px;
+				left: 150px;
+				font-size:13px ;
+				font-family:"Times New Roman";
+				font-weight: 530;
+				letter-spacing: 1px;
+			}
+			#logo{
+				position: absolute;
+				top: 335px;
+				left: 127px;
+			}
+			#logo .imglogo2{
+				position: absolute;
+				top: 10px;
+				left: 100px;
+			}
+			#ceyinyin{
+				border: 2px solid;
+				position: absolute;
+				background-color: #010101;
+				right: 0px;
+				bottom: 0px;
+				z-index: 10;
+			}
+			/*出场特效*/
+			@-webkit-keyframes chuchangimg1{
+				0%{transform: scale(0.1);}
+				100%{transform: scale(1);}
+			}
+			@-webkit-keyframes chuchangimg2{
+				0%{width: 50px;opacity: 0;}
+				100%{width: 190px; opacity: 1;}
+			}
+			@-webkit-keyframes chuchangyinyin{
+				0%{height: 0%;}
+				30%{height: 100%;}
+				50%{width: 0px;height: 100%;}
+				70%{width: 60px;height: 100%;transform: translateX(0); opacity: 1;}
+				100%{width: 0px;height: 100%;transform: translateX(-60px); opacity: 0;}
+			}
+			@-webkit-keyframes chuchangnavigaion{
+				0%{width: 0px;opacity: 0;}
+				100%{width: 60px;opacity: 1;}
+			}
+			.chuchangnavigaion{
+				animation: chuchangnavigaion 1s linear forwards;
+				-webkit-animation:chuchangnavigaion 1s linear forwards;
+				-moz-animation:chuchangnavigaion 1s linear forwards;
+				-o-animation:chuchangnavigaion 1s linear forwards;
+			}
+			@-webkit-keyframes chuchangbody{
+				0%{background-image: url(HomeFile/img/sfas.png);}
+				100%{background-image: url(img/123.PNG);}
+			}
+			@-webkit-keyframes chuchangtitle{
+				0%{transform: translateY(50px); opacity: 0;}
+				100%{transform: translateY(0px); opacity: 1;}
+			}
+			@-webkit-keyframes chuchangdiv{
+				0%{width: 0px;}
+				100%{width: 15px;}
+			}
+			@-webkit-keyframes chuchangimg{
+				0%{transform: translateX(-10px); opacity: 0;}
+				100%{transform: translateX(0px); opacity: 1;}
+			}
+		</style>
+	</head>
+	<body id="page--home">
+		<div id="content">
+			<div id="logo" onclick="javascript:window.location.href='Landed.html'" onmouseover="javascript:this.style.cursor='pointer'">
+				<img src="HomeFile/img/QQ截图20190210131258.png" class="imglogo1" width="84px" height="80px"/>
+				<img src="HomeFile/img/QQ截图201902101313112.png" class="imglogo2" width="190px" height="58px"/>
+			</div>
+			<div id="titles">
+				<span id="">
+					知覧の息吹を、一葉に込めて<br />
+				</span>
+				<span id="">
+					The essence of Chiran, in every leaf
+				</span>
+			</div>
+			<div id="damenu">
+				<ul>
+					<li id="10" onmouseover="hover2(this)" onmouseout="leaver2(this)" onclick="jinrumenu()">
+						<div></div>
+						<img src="img/menu_products.svg" width="13px"/>
+					</li>
+					<li id="11" onmouseover="hover2(this)" onmouseout="leaver2(this)">
+						<div></div>
+						<img src="img/menu_honto.svg" width="13px"/>
+					</li>
+					<li id="12" onmouseover="hover2(this)" onmouseout="leaver2(this)">
+						<div></div>
+						<img src="img/menu_leaf.svg" width="13px"/>
+					</li>
+					<li id="13" onmouseover="hover2(this)" onmouseout="leaver2(this)">
+						<div></div>
+						<img src="img/menu_blend.svg" width="13px"/>
+					</li>
+					<li id="14" onmouseover="hover2(this)" onmouseout="leaver2(this)">
+						<div></div>
+						<img src="img/menu_tashinamu.svg" width="13px"/>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="ceyinyin"></div>
+		<div  id="navigaion">
+			<img src="img/mengsjah.svg" width="200px" height="140px" id="imgement"/>
+			<div id="shopping">
+				<span>
+					网上商店
+				</span>
+				<img src="img/お茶のはまだ.svg" width="25px" height="25px"/>
+			</div>
+			<div id="click1" onclick="homecleck1()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="click2" onclick="homecleck2()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="xiaomenu">
+				<ul>
+					<li id="1" onmouseover="hover(this)" onmouseout="leaver(this)" onclick="jinrumenu()">
+						<div></div>
+						<img src="img/menu_products.svg"/>
+					</li>
+					<li id="2" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_honto.svg"/>
+					</li>
+					<li id="3" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_leaf.svg"/>
+					</li>
+					<li id="4" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_blend.svg"/>
+					</li>
+					<li id="5" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_tashinamu.svg"/>
+					</li>
+					<li id="6" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_info.svg"/>
+					</li>
+					<li id="7" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_shop.svg"/>
+					</li>
+					<li id="8" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_contact.svg"/>
+					</li>
+				</ul>
+			</div>
+			<p id="pname">©HAMADA&nbsp;TEA。</p>
+		</div>
+		<script src="HomeFile/js/Home_page.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//出场特效
+			window.onload=function(){
+				document.getElementsByClassName("imglogo1")[0].style.animation="chuchangimg1 0.5s linear";
+				document.getElementsByClassName("imglogo2")[0].style.animation="chuchangimg2 1s linear";
+				setTimeout("chuchang1()",1000);
+				setTimeout("chuchang2()",2000);
+				setTimeout("document.getElementById('navigaion').style.opacity=1;",3000);
+			}
+			function chuchang1(){
+				document.getElementById("ceyinyin").style.animation="chuchangyinyin 2s linear";
+				setTimeout("document.getElementById('navigaion').className='chuchangnavigaion';",1100);
+			}
+			function chuchang2(){
+				document.body.style.animation="chuchangbody 3s linear forwards";
+				document.getElementById("titles").style.display="block";
+				document.getElementById("damenu").style.display="block";
+				document.getElementById("titles").style.animation="chuchangtitle 1s linear";
+				for (var i=10;i<15;i++) {
+					document.getElementById(i).firstElementChild.style.animation="chuchangdiv 1s linear";
+					document.getElementById(i).lastElementChild.style.animation="chuchangimg 1s linear";
+				}
+			}
+			function jinrumenu(){
+				window.location.href="Commodity.html";
+			}
+		</script>
+	</body>
+</html>

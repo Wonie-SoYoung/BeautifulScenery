@@ -1,0 +1,175 @@
+#paycontent{
+	position: absolute;
+	width: 100%;
+	height: 300px;
+}
+#paycontent .imglogo{
+	position: absolute;
+	top: 40px;
+	left: 40px;
+}
+.biaoti{
+	position: relative;
+	top: 130px;
+	left: 180px;
+	display: none;
+}
+.biaoti p:first-of-type{
+	font-size: 34px;
+	/*font-family:  "STZhongsong";*/
+font-family: "STSong";
+letter-spacing: 2px;
+}
+.biaoti p:last-of-type{
+	font-size: 15px;
+	font-family: "Georgia";
+	margin-left: 5px;
+	margin-top: -30px;
+}
+.xiahuaxian{
+	border-left: 1px solid #5D6666;
+	position: absolute;
+	height: 270px;
+	top: 0px;
+	left: 40%;
+	display: none;
+}
+.paytitlt{
+	font-size: 14px;
+	font-family:  "Microsoft JhengHei";
+	position: relative;
+	left: 680px;
+	top: 50px;
+	line-height: 25px;
+	letter-spacing: 1.5px;
+	font-family: bold;
+	color: #5D6666;
+	display: none;
+}
+#zhuyao{
+	position: absolute;
+	width: 1110px;
+	height: 500px;
+	top: 320px;
+	left: 180px;
+	display: none;
+}
+.huiyuanmingcheng{
+	margin-bottom: 58px;
+}
+.xinxititle{
+	display: inline;
+	font-family:  "宋体";
+	font-size: 20px;
+	margin-right: 100px;
+	letter-spacing: .1em!important;
+	line-height: 1.75;
+}
+.inptes{
+	position: absolute;
+	right: 0;
+	width: 695px;
+	height: 56px;
+	border-radius: 7px;
+	border: 1px solid #BFBFBF;
+	outline:none;
+	padding-left: 20px;
+	font-size: 15px;
+	font-family:  "Microsoft JhengHei";
+	background-color: #FAFBFB;
+}
+.bitian{
+	border: 1px solid;
+	margin-left: 10px;
+	font-size: 10px;
+	font-weight: bold;
+	font-family:  "Microsoft JhengHei";
+	border-radius: 3px;
+	width: 33px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	background-color: #EBB9AA;
+	color: #F5F7F9;
+	text-align: center;
+}
+#afterbody{
+	position: absolute;
+	bottom: -280px;
+	width: 100%;
+}
+#afterbody .tieku{
+	border-top: 1px solid;
+	border-bottom:1px solid ;
+	position: relative;
+	padding: 15px;
+	border-color: #DEDEDE;
+}
+#afterbody .tieku span:first-of-type{
+	color: #808080;
+	font-size: 12px;
+	padding-left: 60px;
+}
+#afterbody .tieku span:last-of-type{
+	color: #808080;
+	font-size: 12px;
+}
+#afterbody .tieku img{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#afterbody .site{
+	position: absolute;
+	top: 120px;
+	left: 33%;
+}
+#afterbody .site img{
+	margin-left: 200px;
+}
+#afterbody .site .sitep1{
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	margin-left: 120px;
+	margin-bottom: -10px;
+	margin-top: 30px;
+}
+#afterbody .site .sitep2{
+	font-size: 14px;
+	margin-left: 160px;
+	font-weight: 500;
+	font-family: "Times New Roman" ;
+}
+#afterbody .site .sitep3{
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-family: "Verdana";
+	margin-bottom: 50px;
+}
+#tijiao{
+	position: absolute;
+	top: 525px;
+	left: 400px;
+}
+#tijiao p{
+	font-family:"微软雅黑";
+	font-size: 15px;
+	color: #5D6666;
+}
+#tijiao .fukuang{
+	border-bottom: 1px dotted;
+	position: absolute;
+	right: -540px;
+	width: 220px;
+	height: 55px;
+	top: -0px;
+}
+#tijiao .fukuang div{
+	border: 1px solid #5D6666;
+	height: 50px;
+	width: 226px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 7px;
+	position: absolute;
+	right: -4px;
+}

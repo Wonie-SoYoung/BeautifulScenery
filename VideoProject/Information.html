@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="Information/css/Information.css" />
+	</head>
+	<body>
+		<section class="vsns clearfix">
+			<h1 class="vsns-title" style="background:none;font-size:22px;">消息提醒</h1>
+			<div class="vsns-main">
+				<div class="vsns-tabs">
+					<a id="notice" class="selected">提醒</a>
+					<a id="system">通知</a>
+					<a id="self">约片合作</a>
+				</div>
+				<div class="content">
+					<ul class="inform">
+						<li class="clearfix inform-message">
+							<div class="heng"></div>
+							<div class="inform-sys inform-tip">
+								<span></span>
+								消息提醒: 
+							</div>
+							<div class="inform-cont" style="width:448px;cursor:auto;">
+								<span>
+									<a>鲸落</a> 在 <a>con</a> 回复了你的评论
+								</span>
+							</div>
+							<div class="inform-close">
+								<a n="2550189">×</a>
+							</div>
+							<div class="inform-time">
+								<span>05-27 04:57</span>
+							</div>
+						</li>
+						<li class="clearfix inform-message">
+							<div class="heng"></div>
+							<div class="inform-sys inform-tip">
+								<span></span>
+								消息提醒: 
+							</div>
+							<div class="inform-cont" style="width:448px;cursor:auto;">
+								<span>
+									你的作品<a>con</a> 有了新的评论
+								</span>
+							</div>
+							<div class="inform-close">
+								<a n="2550189">×</a>
+							</div>
+							<div class="inform-time">
+								<span>05-27 04:57</span>
+							</div>
+						</li>
+						<li class="clearfix inform-message">
+							<div class="heng"></div>
+							<div class="inform-sys inform-tip">
+								<span></span>
+								消息提醒: 
+							</div>
+							<div class="inform-cont" style="width:448px;cursor:auto;">
+								<span>
+									<a>偽の</a> 喜欢了你的 <a>倚天屠龙记</a>
+								</span>
+							</div>
+							<div class="inform-close">
+								<a n="2550189">×</a>
+							</div>
+							<div class="inform-time">
+								<span>05-27 04:57</span>
+							</div>
+						</li>
+					</ul>
+					<div class="page-wrap">
+						<div class="page">
+							<span class="current">1</span>
+							<a>2</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="vsns-side">
+				<div class="app-ad">
+					<p>下载新片场 App，不错过任何消息</p>
+					<div>
+						<img class="qrcode-img" src="Information/img/xpc-gzh.png" />
+						<div class="btn-side">
+							<a><span><img src="Information/img/apple.png">iPhone</span></a><br />
+							<a><span><img src="Information/img/android.png">Android</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="sidebar-item">邀请好友来新片场</div>
+				<div class="sidebar-invite clearfix">
+					<a id="invite-qq" class="invite-qq inb invite-icon">
+						<span class="inv-icon"></span>QQ邀请
+					</a>
+					<a id="invite-wb" class="invite-sina inb invite-icon">
+						<span class="inv-icon"></span>微博邀请
+					</a>
+					<div class="invite-email">
+						<input type="text" class="invite-input" id="invite-mail" placeholder="输入对方的邮箱地址" />
+					</div>
+					<a id="invite-mail-send" class="rl-btn r">发送邀请</a>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script>
+			$(function(){
+				$(".inform-message").hover(function(){
+					$(this).children(".heng").css("display","block");
+					$(this).children(".inform-close").children().css("opacity","1");
+				},function(){
+					$(this).children(".heng").css("display","none");
+					$(this).children(".inform-close").children().css("opacity","0");
+				})
+			})
+		</script>
+	</body>
+</html>

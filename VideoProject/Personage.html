@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="Personage/css/Personage.css" />
+		<style>
+				.filmplay-black-box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    left: 0;
+    top: 0;
+    z-index: 10002;
+}
+.filmplay-inner-box {
+    width: 440px;
+    background-color: #fff;
+}
+.filmplay-black-box .filmplay-inner-box {
+    position: absolute;
+    width: 380px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 2px;
+    overflow: hidden;
+}
+.icon-close:before {
+    content: "\e908";
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.filmplay-black-box .filmplay-inner-box .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 1;
+}
+.filmplay-inner-box .creator-con p {
+    position: relative;
+    padding: 15px 20px;
+    border-bottom: 4px solid #f7f7f7;
+    line-height: 1;
+}
+.filmplay-inner-box .creator-con .list-wrap {
+    max-height: 535px;
+    overflow-y: auto;
+}
+.filmplay-inner-box .creator-con .list-wrap li {
+    position: relative;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0 20px;
+}
+.filmplay-inner-box .creator-con .list-wrap li .a-wrap {
+    border-bottom: 1px solid #f0f0f0;
+    display: block;
+    padding: 14px 0;
+}
+.filmplay-inner-box .creator-con .list-wrap li .avator-wrap {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+.filmplay-inner-box .creator-con .list-wrap li .avator {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+.filmplay-inner-box .creator-con .list-wrap li .info {
+    margin-left: 48px;
+    width: 220px;
+}
+.filmplay-inner-box .creator-con .list-wrap li .info h3 {
+    height: 20px;
+}
+.filmplay-inner-box .creator-con .list-wrap li .a-wrap .follow-btn {
+    position: absolute;
+    width: 58px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 2px;
+    border: 1px solid #e74b3b;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    text-align: center;
+}
+.c_w_f {
+    color: #ffffff;
+}
+.icon-close{
+	cursor: pointer;
+	margin-right: 10px;
+}
+.icon-close:before {
+	display:inline-block;
+	height:15px;
+	border-left:1px solid;
+    content: "";
+    transform:rotate(-45deg);
+    position: relative;
+    left: 1px;
+}
+.icon-close:after{
+	display:inline-block;
+	height:15px;
+	border-right:1px solid;
+    content: "";
+     transform:rotate(45deg);
+}
+		</style>
+	</head>
+	<body>
+		<div id="header-common">
+			<div class="header-con">
+				<a class="logo-v-center"><span><img src="img/timg.png"></span></a>
+				<ul class="nav-list-left-ul">
+					<li class="nav-item"><a href="Homepage.html">首页</a></li>
+					<li class="nav-item hover-elem">
+						<i class="icon-arrow-down"></i>
+						<a>发现</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											作品
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>广告</a></li>
+											<li class="nav-sublist-item"><a>宣传片</a></li>
+											<li class="nav-sublist-item"><a>剧情短片</a></li>
+											<li class="nav-sublist-item"><a>纪录片</a></li>
+											<li class="nav-sublist-item"><a>创意混剪</a></li>
+											<li class="nav-sublist-item"><a>MV</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											创作人
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>导演</a></li>
+											<li class="nav-sublist-item"><a>摄影师</a></li>
+											<li class="nav-sublist-item"><a>剪辑师</a></li>
+											<li class="nav-sublist-item"><a>美术</a></li>
+											<li class="nav-sublist-item"><a>制片人</a></li>
+											<li class="nav-sublist-item"><a>机构</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											文章
+											<i class="icon-arrow-right"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item"><a>关注</a></li>
+					<li class="nav-item school hover-elem">
+						<a>学院</a>
+					</li>
+					<li class="nav-item resource hover-elem resource-video">
+						<i class="icon-arrow-down"></i>
+						<a>素材</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											视频
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>动物</a></li>
+											<li class="nav-sublist-item"><a>人物</a></li>
+											<li class="nav-sublist-item"><a>自然</a></li>
+											<li class="nav-sublist-item"><a>科技</a></li>
+											<li class="nav-sublist-item"><a>建筑物</a></li>
+											<li class="nav-sublist-item"><a>商业</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											音乐
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>温暖</a></li>
+											<li class="nav-sublist-item"><a>明快</a></li>
+											<li class="nav-sublist-item"><a>抒情</a></li>
+											<li class="nav-sublist-item"><a>振奋人心</a></li>
+											<li class="nav-sublist-item"><a>钢琴</a></li>
+											<li class="nav-sublist-item"><a>弦乐组</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item"><a>活动</a></li>
+					<li class="nav-item hover-elem">
+						<a class="new">APP</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<div class="xpccode">
+									<img src="img/235b557e8b381c5.png" />
+									<p>
+										扫描二维码
+										<br />
+										 下载新片场APP
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item hover-elem">
+						<i class="icon-arrow-down"></i>
+						<a>更多</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="genduo-li"><a>场库</a></li>
+									<li class="genduo-li"><a>新片场影业</a></li>
+									<li class="genduo-li"><a>新片场短视频</a></li>
+									<li class="genduo-li"><a>新片场营销</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item newera">
+						<a><img src="img/155c3db8705ce6a.png"></a>
+					</li>
+				</ul>
+				<ul class="right-part">
+					<li class="search-btn-icon-search">
+						<span class="yuan"></span>
+						<span class="gang"></span>
+					</li>
+					<li class="user-face">
+						<span class="new-msginfo-show-msg"></span>
+						<a>
+							<div class="user-face-con">
+								<img src="img/100.jpg"/>
+								<span class="author-v-yellow-v"></span>
+							</div>
+						</a>
+						<div class="faxian-list user-hover-wrap">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="user-li"><a>个人主页</a></li>
+									<li class="user-li"><a>消息提醒</a></li>
+									<li class="line"></li>
+									<li class="user-li"><a>收藏夹</a></li>
+									<li class="user-li"><a>我的课程</a></li>
+									<li class="user-li"><a>我的素材</a></li>
+									<li class="user-li"><a>我的订单</a></li>
+									<li class="user-li"><a>我的优惠券</a></li>
+									<li class="user-li"><a>我的购物车</a></li>
+									<li class="line"></li>
+									<li class="user-li"><a>认证信息</a></li>
+									<li class="user-li"><a>账号设置</a></li>
+									<li class="user-li"><a>退出登录</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="upload-btn">
+						<a href="uploading.html">上传作品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="header-container">
+			<div class="common-layer-cover dn">
+				<div class="set-bg-pop pop-c">
+					<div class="tip-wrap">
+						<h2 class="set-bg-tab">
+							<a class="custom selected">自定义背景</a>
+							<a class="default">默认背景</a>
+						</h2>
+						<span class="common-notice-cover-close  dialog-close close-reload close-drag"></span>
+					</div>
+					<div class="set-bg-pop-content">
+						<div class="set-bg-main">
+							<div class="set-bg-1 dn">
+								<ul class="bgd-list clearfix">
+									<li><img src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg"></li>
+									<li><img src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg"></li>
+									<li><img src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg"></li>
+									<li><img src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg"></li>
+									<li><img src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg"></li>
+									<li><img src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg"></li>
+									<li><img src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg"></li>
+								</ul>
+							</div>
+							<div class="set-bg-2 clearfix">
+								<div class="set-bg-pre">
+									<span class="bg-cover"></span>
+									<span class="loading-cover dn"></span>
+									<a id="id-upload-bg">
+										<span class="bg-cover dn"></span>
+										<input id="select_btn_1" class="selectbtn dn" type="file" name="fileselect"/>
+										<a id="file_upload_1-button" class="uploadify-button">上传背景图</a>
+										<div class="uploadify-queue"></div>
+									</a>
+								</div>
+								<div class="upload-tip">
+									请上传格式为 JPG、JPEG、PNG 的文件。<br />
+									文件大小不超过 5M，图片尺寸不小于 1440*370 px。
+								</div>
+							</div>
+						</div>
+						<a class="button-group bg-red">保 存</a>
+					</div>
+				</div>
+			</div>
+			<div class="banner-container">
+				<div class="banner-wrap">
+					<img src="Personage/img/bg-big.jpg" class="backimg"/>
+					<div class="banner-linear">
+						<span class="avator-wrap-s">
+							<img src="Homepage/img/100.jpg"/>
+							<span class="author-v_yellow-v"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="creator-info-wrap">
+				<div class="creator-info">
+					<div class="btn-wrap">
+							<div class="banner-ban">
+								<a class="btn show-menu-btn J_menu_btn fs_12 fw_600 c_b_3"></a>
+								<a class="btn show-qr fs_12 fw_600 c_b_3"></a>
+								<a class="btn contact-btn"><span class="fs_12 fw_600 c_b_3 btn-message">联系他</span></a>
+								<span class="fw_600 c_b_3 bg-red follow-btn btn ">
+									<span class="follow-icon icon-plus v-center "></span>
+									<span  class="fs_12 follow-text v-center">关注</span>
+								</span>
+							</div>
+							<div class="banner-btn dn">
+								<a class="btn show-menu-btn J_menu_btn fs_12 fw_600 c_b_3"></a>
+								<a class="set-bg fs_12 fw_600 c_b_3" id="id-set-bg">换背景</a>
+								<a class="set-info fs_12 fw_600 c_b_3">修改资料</a>
+							</div>
+					</div>
+					<p class="creator-name fs_26 fw_600 c_b_26">陶磊</p>
+					<p class="creator-desc fs_14 fw_300 c_b_3 line-hide-1">魔幻寫實， 情感， 動物， 說故事</p>
+					<p class="creator-detail fs_14 fw_300 c_b_9">
+						<span class="like-wrap">
+							<span class="v-center">人气</span>
+							&nbsp;
+							<span class="like-counts fw_600 v-center">64,684</span>
+						</span>
+						<span class="fans-wrap">
+							<span class="v-center">粉丝</span>
+							&nbsp;
+							<span class="fans-counts fw_600 v-center">1,105</span>
+						</span>
+						<span class="follow-wrap">
+							<span class="v-center">关注</span>
+							&nbsp;
+							<span class="fw_600 v-center">24</span>
+						</span>
+						<span class="icon-location v-center"></span>
+						<span class="v-center">台湾 </span>
+						<span class="icon-career v-center"></span>
+						<span class="v-center">导演</span>
+					</p>
+				</div>
+			</div>
+			<div class="index-tab">
+				<ul class="tab-list">
+					<li class="select">
+						<a class="fs_16 fw_300 c_b_26">作品</a>
+					</li>
+					<li>
+						<a class="fs_16 fw_300 c_b_26">文章</a>
+					</li>
+					<li>
+						<a class="fs_16 fw_300 c_b_26">喜欢</a>
+					</li>
+					<li>
+						<a class="fs_16 fw_300 c_b_26">简介</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="space-container">
+			<div class="article-con">
+				<div class="counts-wrap fs_14 fw_300 c_b_26">
+					<div class="cate-list-wrap choose-bar-v3">
+						<div class="choose-bar-bottom clearfix">
+							<ul class="sort-type fs_12 fw_300 c_b_3 clearfix">
+								<li class="selected"><a class="icon-default">默认</a></li>
+								<li><a class="icon-time">最新</a></li>
+								<li><a class="icon-hot">热门</a></li>
+							</ul>
+							<ul class="detail-type fs_12 fw_300 c_b_3 clearfix">
+								<li class="icon-arrow-down duration-item">
+									<span class="fw_600 fw_600 fs_12">公开作品</span>
+									<i class="article-num">16</i>
+									<div class="common-hover-wrap dn">
+										<div class="hover-box">
+											<ul class="list">
+												<li class="selected"><a>全部</a><span class="item-num"></span></li>
+												<li><a>广告</a><span class="item-num">8</span></li>
+												<li><a>广告</a><span class="item-num">8</span></li>
+												<li><a>广告</a><span class="item-num">8</span></li>
+												<li><a>广告</a><span class="item-num">8</span></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>			
+				<div class="article-wrap">
+					<div class="top-video enter-filmplay">
+						<a class="video-cover top-video-cover">
+							<img class="video-img lazy-img lazy-img-show" src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg" />
+							<span class="duration fs_14">05' 21''</span>
+							<div class="video-cover-con"><div class="video-mark"><div class="list-tags"></div></div></div>
+							<div class="video-hover-con"></div>
+						</a>
+						<div class="top-video-info">
+							<a><h3 class="title fs_20 fw_600 c_b_s_1 line-hide-2">浦發銀行 - 我們的故事從沒錢開始 清明篇 Dir's cut</h3></a>
+							<div class="new-cate">
+								<span class="fs_12 fw_300 c_b_9">广告 - 地产金融</span>
+								<span class="i-icon v-center"></span>
+								<span class="fs_12 fw_300 c_b_9">MV</span>
+							</div>
+							<p class="desc fs_12 fw_300 c_b_3 line-hide-6">
+								有愛即時表現， 才不會在無法挽回中後悔。
+								Client : SPD BANK
+								Agency : W
+								Production Company : Gwantsi
+								Music and Lyrics by W野狗音樂艙
+								Singer : 許鈞
+								Lead Talent : 陳冠寧
+								Director : Lei Tao
+								Executive Producer : Ray & Elaine 
+								Assistant Director : David
+								Producer : Paul 
+								DOP : Luka Milicevic
+								1st AC : Kenny Chen
+								Gaffer : Jimmy Huang
+								Art Director : 孙正初
+								Casting : 周岩品
+								Stylist : 邹瑜
+								Post Producer : 谢云
+								Offline Editor : 許惟堯
+								Online Editor : 谢钰 
+								Color Grade : 张英杰
+								Sound Mix : Smile Studio
+							</p>
+							<div class="video-view fs_12 fw_300 c_b_9">
+								<span class="fw_300 icon-play-volume">5233</span>
+								<span class="fw_300 c_b_9 icon-like">306</span>
+							</div>
+							<div class="user-info">
+								<div class="user-link v-center">
+									<span class="name fs_14 fw_300 c_b_3 v-center line-hide-1">片中职务</span>
+								</div>
+								<span class="role fs_14 fw_600 c_b_3 v-center line-hide-1">导演/编剧</span>
+							</div>
+						</div>
+					</div>
+					<ul class="article-list">
+						<li class="enter-filmplay">
+							<a class="video-cover">
+								<img class="lazy-img lazy-img-show" src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg" />
+								<span  class="duration fs_12">01' 47''</span>
+								<div class="video-cover-con"><div class="video-mark"><div class="list-tags"></div></div></div>
+								<div class="video-hover-con">
+									<div class="fs_12 fw_300 c_w_f desc line-hide-3">Agency: Mother Production House: Gwantsi Director: Tao Lei</div>
+									<p class="fs_12">2019-03-18 发布</p>
+								</div>
+							</a>
+							<div class="video-con">
+								<div class="video-con-top">
+									<a><p class="fs_14 fw_600 c_b_3 line-hide-1">NOKIA CNY</p></a>
+									<div class="new-cate"><span class="fs_12 fw_300 c_b_9">广告 - 手机数码</span></div>
+									<div class="video-view fs_12 fw_300 c_b_9">
+										<span class="fw_300 icon-play-volume">181</span>
+										<span class="fw_300 c_b_9 icon-like">2</span>
+									</div>
+								</div>
+								<div class="user-info">
+									<div class="user-link v-center"><span class="name fs_12 fw_300 c_b_3 v-center line-hide-1">片中职务</span></div>
+									<span class="role fs_12 fw_300 c_b_9 v-center line-hide-1">导演</span>
+								</div>
+							</div>
+						</li>
+						<li class="enter-filmplay">
+							<a class="video-cover">
+								<img class="lazy-img lazy-img-show" src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg" />
+								<span  class="duration fs_12">01' 47''</span>
+								<div class="video-cover-con"><div class="video-mark"><div class="list-tags"></div></div></div>
+								<div class="video-hover-con">
+									<div class="fs_12 fw_300 c_w_f desc line-hide-3">Agency: Mother Production House: Gwantsi Director: Tao Lei</div>
+									<p class="fs_12">2019-03-18 发布</p>
+								</div>
+							</a>
+							<div class="video-con">
+								<div class="video-con-top">
+									<a><p class="fs_14 fw_600 c_b_3 line-hide-1">NOKIA CNY</p></a>
+									<div class="new-cate"><span class="fs_12 fw_300 c_b_9">广告 - 手机数码</span></div>
+									<div class="video-view fs_12 fw_300 c_b_9">
+										<span class="fw_300 icon-play-volume">181</span>
+										<span class="fw_300 c_b_9 icon-like">2</span>
+									</div>
+								</div>
+								<div class="user-info">
+									<div class="user-link v-center"><span class="name fs_12 fw_300 c_b_3 v-center line-hide-1">片中职务</span></div>
+									<span class="role fs_12 fw_300 c_b_9 v-center line-hide-1">导演</span>
+								</div>
+							</div>
+						</li>
+						<li class="enter-filmplay">
+							<a class="video-cover">
+								<img class="lazy-img lazy-img-show" src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg" />
+								<span  class="duration fs_12">01' 47''</span>
+								<div class="video-cover-con"><div class="video-mark"><div class="list-tags"></div></div></div>
+								<div class="video-hover-con">
+									<div class="fs_12 fw_300 c_w_f desc line-hide-3">Agency: Mother Production House: Gwantsi Director: Tao Lei</div>
+									<p class="fs_12">2019-03-18 发布</p>
+								</div>
+							</a>
+							<div class="video-con">
+								<div class="video-con-top">
+									<a><p class="fs_14 fw_600 c_b_3 line-hide-1">NOKIA CNY</p></a>
+									<div class="new-cate"><span class="fs_12 fw_300 c_b_9">广告 - 手机数码</span></div>
+									<div class="video-view fs_12 fw_300 c_b_9">
+										<span class="fw_300 icon-play-volume">181</span>
+										<span class="fw_300 c_b_9 icon-like">2</span>
+									</div>
+								</div>
+								<div class="user-info">
+									<div class="user-link v-center"><span class="name fs_12 fw_300 c_b_3 v-center line-hide-1">片中职务</span></div>
+									<span class="role fs_12 fw_300 c_b_9 v-center line-hide-1">导演</span>
+								</div>
+							</div>
+						</li>
+						<li class="enter-filmplay">
+							<a class="video-cover">
+								<img class="lazy-img lazy-img-show" src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg" />
+								<span  class="duration fs_12">01' 47''</span>
+								<div class="video-cover-con"><div class="video-mark"><div class="list-tags"></div></div></div>
+								<div class="video-hover-con">
+									<div class="fs_12 fw_300 c_w_f desc line-hide-3">Agency: Mother Production House: Gwantsi Director: Tao Lei</div>
+									<p class="fs_12">2019-03-18 发布</p>
+								</div>
+							</a>
+							<div class="video-con">
+								<div class="video-con-top">
+									<a><p class="fs_14 fw_600 c_b_3 line-hide-1">NOKIA CNY</p></a>
+									<div class="new-cate"><span class="fs_12 fw_300 c_b_9">广告 - 手机数码</span></div>
+									<div class="video-view fs_12 fw_300 c_b_9">
+										<span class="fw_300 icon-play-volume">181</span>
+										<span class="fw_300 c_b_9 icon-like">2</span>
+									</div>
+								</div>
+								<div class="user-info">
+									<div class="user-link v-center"><span class="name fs_12 fw_300 c_b_3 v-center line-hide-1">片中职务</span></div>
+									<span class="role fs_12 fw_300 c_b_9 v-center line-hide-1">导演</span>
+								</div>
+							</div>
+						</li>
+						<li class="enter-filmplay">
+							<a class="video-cover">
+								<img class="lazy-img lazy-img-show" src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg" />
+								<span  class="duration fs_12">01' 47''</span>
+								<div class="video-cover-con"><div class="video-mark"><div class="list-tags"></div></div></div>
+								<div class="video-hover-con">
+									<div class="fs_12 fw_300 c_w_f desc line-hide-3">Agency: Mother Production House: Gwantsi Director: Tao Lei</div>
+									<p class="fs_12">2019-03-18 发布</p>
+								</div>
+							</a>
+							<div class="video-con">
+								<div class="video-con-top">
+									<a><p class="fs_14 fw_600 c_b_3 line-hide-1">NOKIA CNY</p></a>
+									<div class="new-cate"><span class="fs_12 fw_300 c_b_9">广告 - 手机数码</span></div>
+									<div class="video-view fs_12 fw_300 c_b_9">
+										<span class="fw_300 icon-play-volume">181</span>
+										<span class="fw_300 c_b_9 icon-like">2</span>
+									</div>
+								</div>
+								<div class="user-info">
+									<div class="user-link v-center"><span class="name fs_12 fw_300 c_b_3 v-center line-hide-1">片中职务</span></div>
+									<span class="role fs_12 fw_300 c_b_9 v-center line-hide-1">导演</span>
+								</div>
+							</div>
+						</li>
+						<li class="enter-filmplay">
+							<a class="video-cover">
+								<img class="lazy-img lazy-img-show" src="Particulars/img/5ca1dc2d1c26c.jpeg@960w_540h_1e_1c.jpg" />
+								<span  class="duration fs_12">01' 47''</span>
+								<div class="video-cover-con"><div class="video-mark"><div class="list-tags"></div></div></div>
+								<div class="video-hover-con">
+									<div class="fs_12 fw_300 c_w_f desc line-hide-3">Agency: Mother Production House: Gwantsi Director: Tao Lei</div>
+									<p class="fs_12">2019-03-18 发布</p>
+								</div>
+							</a>
+							<div class="video-con">
+								<div class="video-con-top">
+									<a><p class="fs_14 fw_600 c_b_3 line-hide-1">NOKIA CNY</p></a>
+									<div class="new-cate"><span class="fs_12 fw_300 c_b_9">广告 - 手机数码</span></div>
+									<div class="video-view fs_12 fw_300 c_b_9">
+										<span class="fw_300 icon-play-volume">181</span>
+										<span class="fw_300 c_b_9 icon-like">2</span>
+									</div>
+								</div>
+								<div class="user-info">
+									<div class="user-link v-center"><span class="name fs_12 fw_300 c_b_3 v-center line-hide-1">片中职务</span></div>
+									<span class="role fs_12 fw_300 c_b_9 v-center line-hide-1">导演</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="more fs_16 fw_600 c_b_3 no-more">没有更多了</div>
+				</div>
+			</div>
+			<div class="exp-container" style="display: none;">
+				<div class="exp-con">
+					<div class="counts-wrap fs_14 fw_500 c_b_3">文章&nbsp;<span class="counts">0</span></div>
+					<div class="result-empty fs_20 fw_600 c_b_9">还没有文章</div>
+				</div>
+			</div>
+			<div class="like-article-container" style="display: none;">
+				<div class="article-con">
+					<div class="counts-wrap fs_14 fw_300 c_b_26">
+						<div class="cate-list-wrap">
+							<div class="need-open fcate">
+								<a class="cur-cate fs_14 fw_300 c_b_26 select">喜欢作品<span class="nums">11</span></a>
+								<div class="common-hover-wrap hover-wrap zIndex-3">
+									<div class="hover-box">
+										<ul class="list fw_300">
+											<li class="select"><a>喜欢作品<span class="item-nums">11</span></a></li>
+											<li class=""><a>喜欢文章<span class="item-nums">0</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="article-wrap">
+						<ul class="article-list">
+							<li class="enter-filmplay" onclick="javascript:location.href='Particulars.html'">
+								<a class="video-cover">
+									<img class="lazy-img-show" src="Producers/img/5caf73402035e.jpeg@540w_324h_1e_1c.png" />
+									<span class="duration fs_12">02' 00''</span>
+									<div class="video-cover-con">
+										<div class="video-mark">
+											<span class="pick-square">
+												<span></span>
+											</span>
+											<div class="list-tags"></div>
+										</div>
+									</div>
+									<div class="video-hover-con">
+										<div class="brief-introduction">vivo X27「求生欲」系列短片 |  制片：王天白 /导演：武健 / 执行导演：康王信/ 摄影指导：海力 /灯光：刘坤朋/ 摇臂摄影：武海鹏 /美术指导：景陆川 /道具：谷新东 /服化造型：张乐 / 外联制片：丁宇星/ 场记：李海伦 /DIT 舜源 /录音：张国栋 / 剪辑：李...</div>
+										<p class="fs_12">2019-04-09 发布</p>
+									</div>
+								</a>
+								<div class="video-con">
+									<div class="video-con-top">
+										<a>
+											<p>vivo X27「求生欲」系列短片</p>
+										</a>
+										<div class="new-cate">
+											<span class="new-fenlei">广告 -手机数码</span>
+										</div>
+										<div class="video-view-fs">
+											<span class="icon-play-volume-left">4953</span>
+											<span class="icon-play-volume-right">188</span>
+										</div>
+									</div>
+									<div class="user-info">
+										<a>
+											<span class="head-wrap">
+												<img src="Producers/img/USerimg.png" />
+												<span class="author-v-yellow-v"></span>
+											</span>
+											<span class="author-title">万一通道</span>
+										</a>
+										<span class="v-center-line-hide-1">策划／编剧／导演／剪辑／出品人</span>
+									</div>
+								</div>
+							</li>
+							<li class="enter-filmplay" onclick="javascript:location.href='Particulars.html'">
+								<a class="video-cover">
+									<img class="lazy-img-show" src="Producers/img/5caf73402035e.jpeg@540w_324h_1e_1c.png" />
+									<span class="duration fs_12">02' 00''</span>
+									<div class="video-cover-con">
+										<div class="video-mark">
+											<span class="pick-square">
+												<span></span>
+											</span>
+											<div class="list-tags"></div>
+										</div>
+									</div>
+									<div class="video-hover-con">
+										<div class="brief-introduction">vivo X27「求生欲」系列短片 |  制片：王天白 /导演：武健 / 执行导演：康王信/ 摄影指导：海力 /灯光：刘坤朋/ 摇臂摄影：武海鹏 /美术指导：景陆川 /道具：谷新东 /服化造型：张乐 / 外联制片：丁宇星/ 场记：李海伦 /DIT 舜源 /录音：张国栋 / 剪辑：李...</div>
+										<p class="fs_12">2019-04-09 发布</p>
+									</div>
+								</a>
+								<div class="video-con">
+									<div class="video-con-top">
+										<a>
+											<p>vivo X27「求生欲」系列短片</p>
+										</a>
+										<div class="new-cate">
+											<span class="new-fenlei">广告 -手机数码</span>
+										</div>
+										<div class="video-view-fs">
+											<span class="icon-play-volume-left">4953</span>
+											<span class="icon-play-volume-right">188</span>
+										</div>
+									</div>
+									<div class="user-info">
+										<a>
+											<span class="head-wrap">
+												<img src="Producers/img/USerimg.png" />
+												<span class="author-v-yellow-v"></span>
+											</span>
+											<span class="author-title">万一通道</span>
+										</a>
+										<span class="v-center-line-hide-1">策划／编剧／导演／剪辑／出品人</span>
+									</div>
+								</div>
+							</li>
+							<li class="enter-filmplay" onclick="javascript:location.href='Particulars.html'">
+								<a class="video-cover">
+									<img class="lazy-img-show" src="Producers/img/5caf73402035e.jpeg@540w_324h_1e_1c.png" />
+									<span class="duration fs_12">02' 00''</span>
+									<div class="video-cover-con">
+										<div class="video-mark">
+											<span class="pick-square">
+												<span></span>
+											</span>
+											<div class="list-tags"></div>
+										</div>
+									</div>
+									<div class="video-hover-con">
+										<div class="brief-introduction">vivo X27「求生欲」系列短片 |  制片：王天白 /导演：武健 / 执行导演：康王信/ 摄影指导：海力 /灯光：刘坤朋/ 摇臂摄影：武海鹏 /美术指导：景陆川 /道具：谷新东 /服化造型：张乐 / 外联制片：丁宇星/ 场记：李海伦 /DIT 舜源 /录音：张国栋 / 剪辑：李...</div>
+										<p class="fs_12">2019-04-09 发布</p>
+									</div>
+								</a>
+								<div class="video-con">
+									<div class="video-con-top">
+										<a>
+											<p>vivo X27「求生欲」系列短片</p>
+										</a>
+										<div class="new-cate">
+											<span class="new-fenlei">广告 -手机数码</span>
+										</div>
+										<div class="video-view-fs">
+											<span class="icon-play-volume-left">4953</span>
+											<span class="icon-play-volume-right">188</span>
+										</div>
+									</div>
+									<div class="user-info">
+										<a>
+											<span class="head-wrap">
+												<img src="Producers/img/USerimg.png" />
+												<span class="author-v-yellow-v"></span>
+											</span>
+											<span class="author-title">万一通道</span>
+										</a>
+										<span class="v-center-line-hide-1">策划／编剧／导演／剪辑／出品人</span>
+									</div>
+								</div>
+							</li>
+							<li class="enter-filmplay" onclick="javascript:location.href='Particulars.html'">
+								<a class="video-cover">
+									<img class="lazy-img-show" src="Producers/img/5caf73402035e.jpeg@540w_324h_1e_1c.png" />
+									<span class="duration fs_12">02' 00''</span>
+									<div class="video-cover-con">
+										<div class="video-mark">
+											<span class="pick-square">
+												<span></span>
+											</span>
+											<div class="list-tags"></div>
+										</div>
+									</div>
+									<div class="video-hover-con">
+										<div class="brief-introduction">vivo X27「求生欲」系列短片 |  制片：王天白 /导演：武健 / 执行导演：康王信/ 摄影指导：海力 /灯光：刘坤朋/ 摇臂摄影：武海鹏 /美术指导：景陆川 /道具：谷新东 /服化造型：张乐 / 外联制片：丁宇星/ 场记：李海伦 /DIT 舜源 /录音：张国栋 / 剪辑：李...</div>
+										<p class="fs_12">2019-04-09 发布</p>
+									</div>
+								</a>
+								<div class="video-con">
+									<div class="video-con-top">
+										<a>
+											<p>vivo X27「求生欲」系列短片</p>
+										</a>
+										<div class="new-cate">
+											<span class="new-fenlei">广告 -手机数码</span>
+										</div>
+										<div class="video-view-fs">
+											<span class="icon-play-volume-left">4953</span>
+											<span class="icon-play-volume-right">188</span>
+										</div>
+									</div>
+									<div class="user-info">
+										<a>
+											<span class="head-wrap">
+												<img src="Producers/img/USerimg.png" />
+												<span class="author-v-yellow-v"></span>
+											</span>
+											<span class="author-title">万一通道</span>
+										</a>
+										<span class="v-center-line-hide-1">策划／编剧／导演／剪辑／出品人</span>
+									</div>
+								</div>
+							</li>
+							
+						</ul>
+						<div class="page-wrap">
+							<div class="page"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-container" style="display: none;">
+				<div class="creator-profiles fs_14 clearfix">
+					<div class="sex">
+						<span class="title">性别</span>
+						<span class="con">男</span>
+					</div>
+					<div class="date">
+						<span class="title">生日</span>
+						<span class="con">2001-11-20</span>
+					</div>
+					<div class="addr">
+						<span class="title">所在地：</span>
+						<span class="con">台湾&nbsp;</span>
+					</div>
+					<div class="year">
+						<span class="title">入行年份：</span>
+						<span class="con">
+							<span class="c_b_9">未填写</span>
+						</span>
+					</div>
+					<div class="college">
+						<span class="title">毕业院校：</span>
+						<span class="con"><span>Art Center College of Design</span></span>
+					</div>
+					<div class="about">
+						<span class="title">关于我：</span>
+						<span class="con">魔幻寫實， 情感， 動物， 衝浪， 說故事Asia Represenation: LuckySparkswww.luckysparks.com</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="filmplay-black-box like-creator-wrap">
+			<div class="filmplay-inner-box like-creator-box">
+				<div class="like-creator-con creator-con">
+					<span class="close icon-close"></span>
+					<p class="fs_14 fw_300 c_b_26 line-hide-1">
+						<span class="like-creator-counts fw_600">3</span>
+						个粉丝
+					</p>
+					<div class="list-wrap">
+						<ul class="list">
+							<li>
+								<a class="a-wrap enter-creator-space">
+									<div class="avator-wrap">
+										<img class="avator" src="Homepage/img/100.jpg" />
+									</div>
+									<div class="info">
+										<h3 class="fs_14 fw_600 c_b_3 line-hide-1">鲸落</h3>
+										<div class="info-right fs_12 c_b_9">
+											<span class="fw_300">关注</span>&nbsp;
+											<span class="fw_600 follow-counts">2</span>
+											<span class="i-icon v-center"></span>
+											<span class="fw_300">粉丝</span>&nbsp;
+											<span class="fw_600 fan-counts">0</span>
+										</div>
+									</div>
+									<span class="follow-btn fs_12 c_w_f fw_500 bg-red ">关注</span>
+								</a>
+							</li>
+							<li>
+								<a class="a-wrap enter-creator-space">
+									<div class="avator-wrap">
+										<img class="avator" src="Homepage/img/100.jpg" />
+									</div>
+									<div class="info">
+										<h3 class="fs_14 fw_600 c_b_3 line-hide-1">鲸落</h3>
+										<div class="info-right fs_12 c_b_9">
+											<span class="fw_300">关注</span>&nbsp;
+											<span class="fw_600 follow-counts">2</span>
+											<span class="i-icon v-center"></span>
+											<span class="fw_300">粉丝</span>&nbsp;
+											<span class="fw_600 fan-counts">0</span>
+										</div>
+									</div>
+									<span class="follow-btn fs_12 c_w_f fw_500 bg-red ">关注</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script>
+			$(function(){
+				//点击菜单实现tab切换
+				$(".tab-list li").click(function(){
+					var index=$(this).index();
+					$(this).attr("class","select").siblings().attr("class","");
+					$("#space-container>div:nth-of-type("+(parseInt(index)+1)+")").show().siblings().hide();
+				})
+			})
+		</script>
+	</body>
+</html>

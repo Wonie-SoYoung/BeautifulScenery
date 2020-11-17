@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="Homepage/css/Homepage.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript" src="Homepage/js/sliderMe.js" ></script>
+		<style>
+			.msg_tip.top {
+    transform: translateY(60px);
+}
+.msg_tip {
+    position: fixed;
+    width: 180px;
+    top: 20px;
+    background: #fff;
+    right: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 0;
+    z-index: 999;
+    transition: transform .3s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform .3s cubic-bezier(0.35, 0, 0.25, 1);
+    transform: translateY(0);
+    z-index: 1002;
+}
+.msg_tip .msg_tip_m {
+    margin: 0;
+}
+.msg_tip .msg_tip_m li {
+    padding: 14px 20px;
+    width: 140px;
+    height: 16px;
+    position: relative;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+}
+.msg_tip .msg_tip_m li > a {
+    padding: 0;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333;
+    display: inline-block;
+    height: 16px;
+    line-height: 15px;
+}
+.msg_tip .msg_tip_m li > a.msg_tip_r {
+    font-weight: 500;
+    color: #999;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.msg_tip .new-msg-tip-close {
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    border-top: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+		</style>
+	</head>
+	<body>
+		<div id="header-common">
+			<div class="header-con">
+				<a class="logo-v-center"><span><img src="img/timg.png"></span></a>
+				<ul class="nav-list-left-ul">
+					<li class="nav-item"><a href="Homepage.html">首页</a></li>
+					<li class="nav-item hover-elem">
+						<i class="icon-arrow-down"></i>
+						<a>发现</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											作品
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>广告</a></li>
+											<li class="nav-sublist-item"><a>宣传片</a></li>
+											<li class="nav-sublist-item"><a>剧情短片</a></li>
+											<li class="nav-sublist-item"><a>纪录片</a></li>
+											<li class="nav-sublist-item"><a>创意混剪</a></li>
+											<li class="nav-sublist-item"><a>MV</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											创作人
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>导演</a></li>
+											<li class="nav-sublist-item"><a>摄影师</a></li>
+											<li class="nav-sublist-item"><a>剪辑师</a></li>
+											<li class="nav-sublist-item"><a>美术</a></li>
+											<li class="nav-sublist-item"><a>制片人</a></li>
+											<li class="nav-sublist-item"><a>机构</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											文章
+											<i class="icon-arrow-right"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item"><a>关注</a></li>
+					<li class="nav-item school hover-elem">
+						<a>学院</a>
+					</li>
+					<li class="nav-item resource hover-elem resource-video">
+						<i class="icon-arrow-down"></i>
+						<a>素材</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											视频
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>动物</a></li>
+											<li class="nav-sublist-item"><a>人物</a></li>
+											<li class="nav-sublist-item"><a>自然</a></li>
+											<li class="nav-sublist-item"><a>科技</a></li>
+											<li class="nav-sublist-item"><a>建筑物</a></li>
+											<li class="nav-sublist-item"><a>商业</a></li>
+										</ul>
+									</li>
+									<li class="line"></li>
+									<li class="nav-dropdown-item">
+										<a class="nav-sublist-title">
+											音乐
+											<i class="icon-arrow-right"></i>
+										</a>
+										<ul class="nav-sublist">
+											<li class="nav-sublist-item"><a>温暖</a></li>
+											<li class="nav-sublist-item"><a>明快</a></li>
+											<li class="nav-sublist-item"><a>抒情</a></li>
+											<li class="nav-sublist-item"><a>振奋人心</a></li>
+											<li class="nav-sublist-item"><a>钢琴</a></li>
+											<li class="nav-sublist-item"><a>弦乐组</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item"><a>活动</a></li>
+					<li class="nav-item hover-elem">
+						<a class="new">APP</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<div class="xpccode">
+									<img src="img/235b557e8b381c5.png" />
+									<p>
+										扫描二维码
+										<br />
+										 下载新片场APP
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item hover-elem">
+						<i class="icon-arrow-down"></i>
+						<a>更多</a>
+						<div class="faxian-list">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="genduo-li"><a>场库</a></li>
+									<li class="genduo-li"><a>新片场影业</a></li>
+									<li class="genduo-li"><a>新片场短视频</a></li>
+									<li class="genduo-li"><a>新片场营销</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item newera">
+						<a><img src="img/155c3db8705ce6a.png"></a>
+					</li>
+				</ul>
+				<ul class="right-part">
+					<li class="search-btn-icon-search">
+						<span class="yuan"></span>
+						<span class="gang"></span>
+					</li>
+					<li class="user-face">
+						<span class="new-msginfo-show-msg"></span>
+						<a>
+							<div class="user-face-con">
+								<img src="http://localhost:8080/Project_material/Account_head/123.jpg"/>
+								<span class="author-v-yellow-v"></span>
+							</div>
+						</a>
+						<div class="faxian-list user-hover-wrap">
+							<div class="hover-box">
+								<ul class="ul-list">
+									<li class="user-li"><a>个人主页</a></li>
+									<li class="user-li"><a>消息提醒</a></li>
+									<li class="line"></li>
+									<li class="user-li"><a>收藏夹</a></li>
+									<li class="user-li"><a>我的课程</a></li>
+									<li class="user-li"><a>我的素材</a></li>
+									<li class="user-li"><a>我的订单</a></li>
+									<li class="user-li"><a>我的优惠券</a></li>
+									<li class="user-li"><a>我的购物车</a></li>
+									<li class="line"></li>
+									<li class="user-li"><a>认证信息</a></li>
+									<li class="user-li"><a>账号设置</a></li>
+									<li class="user-li"><a>退出登录</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="upload-btn">
+						<a >上传作品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="msg_tip new-msg-tip top" id="h_xm_tip" style="display: block;">
+			<ul class="msg_tip_m list">
+				<li class="clearfix">
+					<a class="msg_tip_l" href="">1条新喜欢</a>
+					<a class="msg_tip_r" href="">忽略</a>
+				</li>
+				<li class="clearfix">
+					<a class="msg_tip_l" href="">1条新喜欢</a>
+					<a class="msg_tip_r" href="">忽略</a>
+				</li>
+				<li class="clearfix">
+					<a class="msg_tip_l" href="">1条新喜欢</a>
+					<a class="msg_tip_r" href="">忽略</a>
+				</li>
+			</ul>
+			<div class="new-msg-tip-close">全部忽略</div>
+		</div>
+		<div id="theme">
+			<div id="banner-wrap">
+				<div class="theme-top">
+					<ul class="back-banner-list">
+						<li class="swiper-slide">
+							<div class="back-layer-cover">
+								<span></span>
+							</div>
+							<img src="Homepage/img/5cac5600cd0d6.png" class="back-banner-img"/>
+							<div class="banner-link-normal">
+								<img src="Homepage/img/5cac5600cd0d62.png" class="float-banner-img"/>
+								<span class="inner-cover"></span>
+								<div class="float-banner-con">
+									<div class="float-banner-con-inner" >
+										<span class="action-cate-transition">
+											<span class="fs-12-fw-300">纪录 - 旅行 </span>
+											<span class="i-icon-v-center">|</span>
+											<span class="fs-12-fw-300">创意混剪 - 实验 </span>
+										</span>
+										<br>
+										<p class="action-title-fs">
+											赛博朋克风《东京重庆旅拍》
+										</p>
+										<br/>
+										<a class="action-user-info-transition">
+											<div>
+												<img src="Homepage/img/105b6cca361850d.png" />
+												<span class="author-v-yellow-v"></span>
+											</div>
+											<span class="name-line-hide-1">Ronmonkey</span>
+										</a>
+										<p class="desc-line-hide-3">无论是对东京街头错落的店铺招牌的取景，还是重庆那穿山而过的轻轨，充满高科技感的大楼和深夜打烊的小铺，都很有上个世纪八十年代赛博朋克作品的风格。</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide" style="display: none;">
+							<div class="back-layer-cover">
+								<span></span>
+							</div>
+							<img src="Homepage/img/5cac5600cd0d6.png" class="back-banner-img"/>
+							<div class="banner-link-normal">
+								<img src="Homepage/img/5cac5600cd0d62.png" class="float-banner-img"/>
+								<span class="inner-cover"></span>
+								<div class="float-banner-con">
+									<div class="float-banner-con-inner" >
+										<span class="action-cate-transition">
+											<span class="fs-12-fw-300">纪录 - 旅行 </span>
+											<span class="i-icon-v-center">|</span>
+											<span class="fs-12-fw-300">创意混剪 - 实验 </span>
+										</span>
+										<br>
+										<p class="action-title-fs">
+											赛博朋克风《东京重庆旅拍》
+										</p>
+										<br/>
+										<a class="action-user-info-transition">
+											<div>
+												<img src="Homepage/img/105b6cca361850d.png" />
+												<span class="author-v-yellow-v"></span>
+											</div>
+											<span class="name-line-hide-1">Ronmonkey</span>
+										</a>
+										<p class="desc-line-hide-3">无论是对东京街头错落的店铺招牌的取景，还是重庆那穿山而过的轻轨，充满高科技感的大楼和深夜打烊的小铺，都很有上个世纪八十年代赛博朋克作品的风格。</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide" style="display: none;">
+							<div class="back-layer-cover">
+								<span></span>
+							</div>
+							<img src="Homepage/img/5cac5600cd0d6.png" class="back-banner-img"/>
+							<div class="banner-link-normal">
+								<img src="Homepage/img/5cac5600cd0d62.png" class="float-banner-img"/>
+								<span class="inner-cover"></span>
+								<div class="float-banner-con">
+									<div class="float-banner-con-inner" >
+										<span class="action-cate-transition">
+											<span class="fs-12-fw-300">纪录 - 旅行 </span>
+											<span class="i-icon-v-center">|</span>
+											<span class="fs-12-fw-300">创意混剪 - 实验 </span>
+										</span>
+										<br>
+										<p class="action-title-fs">
+											赛博朋克风《东京重庆旅拍》
+										</p>
+										<br/>
+										<a class="action-user-info-transition">
+											<div>
+												<img src="Homepage/img/105b6cca361850d.png" />
+												<span class="author-v-yellow-v"></span>
+											</div>
+											<span class="name-line-hide-1">Ronmonkey</span>
+										</a>
+										<p class="desc-line-hide-3">无论是对东京街头错落的店铺招牌的取景，还是重庆那穿山而过的轻轨，充满高科技感的大楼和深夜打烊的小铺，都很有上个世纪八十年代赛博朋克作品的风格。</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="swiper-slide" style="display: none;">
+							<div class="back-layer-cover">
+								<span></span>
+							</div>
+							<img src="Homepage/img/5cac5600cd0d6.png" class="back-banner-img"/>
+							<div class="banner-link-normal">
+								<img src="Homepage/img/5cac5600cd0d62.png" class="float-banner-img"/>
+								<span class="inner-cover"></span>
+								<div class="float-banner-con">
+									<div class="float-banner-con-inner" >
+										<span class="action-cate-transition">
+											<span class="fs-12-fw-300">纪录 - 旅行 </span>
+											<span class="i-icon-v-center">|</span>
+											<span class="fs-12-fw-300">创意混剪 - 实验 </span>
+										</span>
+										<br>
+										<p class="action-title-fs">
+											赛博朋克风《东京重庆旅拍》
+										</p>
+										<br/>
+										<a class="action-user-info-transition">
+											<div>
+												<img src="Homepage/img/105b6cca361850d.png" />
+												<span class="author-v-yellow-v"></span>
+											</div>
+											<span class="name-line-hide-1">Ronmonkey</span>
+										</a>
+										<p class="desc-line-hide-3">无论是对东京街头错落的店铺招牌的取景，还是重庆那穿山而过的轻轨，充满高科技感的大楼和深夜打烊的小铺，都很有上个世纪八十年代赛博朋克作品的风格。</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<a class="you"><span></span><span></span></a>
+					<a class="zuo"><span></span><span></span></a>
+				</div>
+			</div>
+			<div id="index-con">
+				<div class="index-main-main-center">
+					<div class="extension-wrap">
+						<ul class="sliderUl">
+							<li class="sliderLi">
+								<a><img src="Homepage/img/5caaaf95343ad.png"></a>
+							</li>
+							<li>
+								<a><img src="Homepage/img/5c3c5708b11552.png"></a>
+							</li>
+							<li>
+								<a><img src="Homepage/img/5cab2ba8b2a30.png"></a>
+							</li>
+							<li>
+								<a><img src="Homepage/img/5c99fa0ce204e.png"></a>
+							</li>
+							<li style="margin: 0;">
+								<a><img src="Homepage/img/5ca3178ea857d.png"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="staff-pisk-real-staff-pisk">
+						<div class="title-wrap">
+							<span class="title-wrap-v-center">编辑精选</span>
+							<span class="title-wrap-en-v-center">STAFF PICKS</span>
+							<a class="more-fs-14-fw">更多</a>
+						</div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper-video-list-con">
+								<ul>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/swiper-container-1.png" />
+											<span class="duration-fs-12">01' 18''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title">热</span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-02-25 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>有江湖的地方就有避风塘</p></a>
+												<div>
+													<span>广告 - 餐饮食品</span>
+													<span class="i-icon-v-center">|</span>
+													<span>剧情短片 - 喜剧</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>2位创作人</span></a>
+												<span class="video-zhiye">导演</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/swiper-container-1.png" />
+											<span class="duration-fs-12">01' 18''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title">热</span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-02-25 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>有江湖的地方就有避风塘</p></a>
+												<div>
+													<span>广告 - 餐饮食品</span>
+													<span class="i-icon-v-center">|</span>
+													<span>剧情短片 - 喜剧</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>2位创作人</span></a>
+												<span class="video-zhiye">导演</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/swiper-container-1.png" />
+											<span class="duration-fs-12">01' 18''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title">热</span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-02-25 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>有江湖的地方就有避风塘</p></a>
+												<div>
+													<span>广告 - 餐饮食品</span>
+													<span class="i-icon-v-center">|</span>
+													<span>剧情短片 - 喜剧</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>2位创作人</span></a>
+												<span class="video-zhiye">导演</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/swiper-container-1.png" />
+											<span class="duration-fs-12">01' 18''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title">热</span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-02-25 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>有江湖的地方就有避风塘</p></a>
+												<div>
+													<span>广告 - 餐饮食品</span>
+													<span class="i-icon-v-center">|</span>
+													<span>剧情短片 - 喜剧</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>2位创作人</span></a>
+												<span class="video-zhiye">导演</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/swiper-container-1.png" />
+											<span class="duration-fs-12">01' 18''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title">热</span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-02-25 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>有江湖的地方就有避风塘</p></a>
+												<div>
+													<span>广告 - 餐饮食品</span>
+													<span class="i-icon-v-center">|</span>
+													<span>剧情短片 - 喜剧</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>2位创作人</span></a>
+												<span class="video-zhiye">导演</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/swiper-container-1.png" />
+											<span class="duration-fs-12">01' 18''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title">热</span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-02-25 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>有江湖的地方就有避风塘</p></a>
+												<div>
+													<span>广告 - 餐饮食品</span>
+													<span class="i-icon-v-center">|</span>
+													<span>剧情短片 - 喜剧</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>2位创作人</span></a>
+												<span class="video-zhiye">导演</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/swiper-container-1.png" />
+											<span class="duration-fs-12">01' 18''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title">热</span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-02-25 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>有江湖的地方就有避风塘</p></a>
+												<div>
+													<span>广告 - 餐饮食品</span>
+													<span class="i-icon-v-center">|</span>
+													<span>剧情短片 - 喜剧</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>2位创作人</span></a>
+												<span class="video-zhiye">导演</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/swiper-container-1.png" />
+											<span class="duration-fs-12">01' 18''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title">热</span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-02-25 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>有江湖的地方就有避风塘</p></a>
+												<div>
+													<span>广告 - 餐饮食品</span>
+													<span class="i-icon-v-center">|</span>
+													<span>剧情短片 - 喜剧</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>2位创作人</span></a>
+												<span class="video-zhiye">导演</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<span class="page-btn-left"></span>
+						<span class="page-btn-right"></span>
+					</div>
+					<div class="excellent-creator">
+						<div class="title-wrap">
+							<span class="title-wrap-span-left">优秀创作人</span>
+							<span class="title-wrap-span-right">CREATOR</span>
+							<a>更多</a>
+						</div>
+						<div class="swiper-container-warp">
+							<div class="swiper-container-warp-menu">
+								<ul>
+									<li class="swiper-container-warp-menu-li">
+										<a class="square-creator-click-dplus">
+											<div class="square-creator-card-top">
+												<div class="card-top-cover"></div>
+												<img class="card-top-cover-lazy-img-show" src="Homepage/img/daoyan-back1.png"/>
+												<span class="avator-wrap">
+													<img class="avator-wrap-img-show" src="Homepage/img/daoyan-1.png"/>
+													<span class="author-v-blue-v"></span>
+												</span>
+												<div class="follow-btn">关注</div>
+											</div>
+											<div class="square-creator-card-bottom">
+												<p class="square-creator-card-bottom-p">LUCKYSPARKS幸運火花</p>
+												<div class="square-creator-user-info">
+													<span>制作</span>
+													<span class="slash-icon-v-center">/</span>
+													<span>台湾</span>
+												</div>
+												<div class="intro-line-hide">A CHANGE IN PERSPECTIVE.</div>
+												<div class="user-follow">
+													<span>粉丝</span>
+													&nbsp;
+													<span class="fan-counts">541</span>
+													<span class="span-v-center"></span>
+													<span>关注</span>
+													<span class="follow-counts">12</span>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-container-warp-menu-li">
+										<a class="square-creator-click-dplus">
+											<div class="square-creator-card-top">
+												<div class="card-top-cover"></div>
+												<img class="card-top-cover-lazy-img-show" src="Homepage/img/daoyan-back1.png"/>
+												<span class="avator-wrap">
+													<img class="avator-wrap-img-show" src="Homepage/img/daoyan-1.png"/>
+													<span class="author-v-blue-v"></span>
+												</span>
+												<div class="follow-btn">关注</div>
+											</div>
+											<div class="square-creator-card-bottom">
+												<p class="square-creator-card-bottom-p">LUCKYSPARKS幸運火花</p>
+												<div class="square-creator-user-info">
+													<span>制作</span>
+													<span class="slash-icon-v-center">/</span>
+													<span>台湾</span>
+												</div>
+												<div class="intro-line-hide">A CHANGE IN PERSPECTIVE.</div>
+												<div class="user-follow">
+													<span>粉丝</span>
+													&nbsp;
+													<span class="fan-counts">541</span>
+													<span class="span-v-center"></span>
+													<span>关注</span>
+													<span class="follow-counts">12</span>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-container-warp-menu-li">
+										<a class="square-creator-click-dplus">
+											<div class="square-creator-card-top">
+												<div class="card-top-cover"></div>
+												<img class="card-top-cover-lazy-img-show" src="Homepage/img/daoyan-back1.png"/>
+												<span class="avator-wrap">
+													<img class="avator-wrap-img-show" src="Homepage/img/daoyan-1.png"/>
+													<span class="author-v-blue-v"></span>
+												</span>
+												<div class="follow-btn">关注</div>
+											</div>
+											<div class="square-creator-card-bottom">
+												<p class="square-creator-card-bottom-p">LUCKYSPARKS幸運火花</p>
+												<div class="square-creator-user-info">
+													<span>制作</span>
+													<span class="slash-icon-v-center">/</span>
+													<span>台湾</span>
+												</div>
+												<div class="intro-line-hide">A CHANGE IN PERSPECTIVE.</div>
+												<div class="user-follow">
+													<span>粉丝</span>
+													&nbsp;
+													<span class="fan-counts">541</span>
+													<span class="span-v-center"></span>
+													<span>关注</span>
+													<span class="follow-counts">12</span>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="swiper-container-warp-menu-li">
+										<a class="square-creator-click-dplus">
+											<div class="square-creator-card-top">
+												<div class="card-top-cover"></div>
+												<img class="card-top-cover-lazy-img-show" src="Homepage/img/daoyan-back1.png"/>
+												<span class="avator-wrap">
+													<img class="avator-wrap-img-show" src="Homepage/img/daoyan-1.png"/>
+													<span class="author-v-blue-v"></span>
+												</span>
+												<div class="follow-btn">关注</div>
+											</div>
+											<div class="square-creator-card-bottom">
+												<p class="square-creator-card-bottom-p">LUCKYSPARKS幸運火花</p>
+												<div class="square-creator-user-info">
+													<span>制作</span>
+													<span class="slash-icon-v-center">/</span>
+													<span>台湾</span>
+												</div>
+												<div class="intro-line-hide">A CHANGE IN PERSPECTIVE.</div>
+												<div class="user-follow">
+													<span>粉丝</span>
+													&nbsp;
+													<span class="fan-counts">541</span>
+													<span class="span-v-center"></span>
+													<span>关注</span>
+													<span class="follow-counts">12</span>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="staff-pisk">
+						<div class="title-wrap">
+							<span class="title-wrap-span-left">广告/宣传片</span>
+							<span class="title-wrap-span-right">ADVERTISING</span>
+							<a class="title-wrap-a">更多</a>
+						</div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper-video-list-con">
+								<ul>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="staff-pisk">
+						<div class="title-wrap">
+							<span class="title-wrap-span-left">剧情片</span>
+							<span class="title-wrap-span-right">DRAMA</span>
+							<a class="title-wrap-a">更多</a>
+						</div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper-video-list-con">
+								<ul>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="staff-pisk">
+						<div class="title-wrap">
+							<span class="title-wrap-span-left">纪录片</span>
+							<span class="title-wrap-span-right">DOCUMENTARY</span>
+							<a class="title-wrap-a">更多</a>
+						</div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper-video-list-con">
+								<ul>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+									<li class="square-article-click-dplus">
+										<a class="video-cover">
+											<img src="Homepage/img/5cb06a744cba6.png" />
+											<span class="duration-fs-12">00' 23''</span>
+											<div class="video-cover-con">
+												<div class="video-mark">
+													<span class="re-title"></span>
+													<div class="list-tags"></div>
+												</div>
+											</div>
+											<div class="video-hover-con">
+												<div class="fs-desc-line-hide-3"></div>
+												<p class="fs-12">2019-04-12 发布</p>
+											</div>
+										</a>
+										<div class="video-con">
+											<div class="video-con-top">
+												<a><p>雅诗兰黛 2019 杨幂代言 － 新年礼盒套装广告 花絮</p></a>
+												<div>
+													<span>广告 - 美妆时尚</span>
+												</div>
+											</div>
+											<div class="video-con-bottom">
+												<a><img src="Homepage/img/swiper-container-toxiang-1.png"><span>Lynn X</span></a>
+												<span class="video-zhiye">制片人</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="school-resource-dplus-list-wrap">
+						<div class="title-wrap">
+							<span class="title-wrap-span-left">新片场学院</span>
+							<span class="title-wrap-span-right">NEW STUDIOS ACADEMY</span>
+							<a class="title-wrap-a">更多</a>
+						</div>
+						<div class="school-list-wrap">
+							<ul class="school-list-wrap-ul">
+								<li class="school-intro-item">
+									<img class="school-intro-img" src="Homepage/img/235addbbcd8f43e.png"/>
+									<a>
+										<div class="school-intro-wrap">
+											<div class="school-intro-detail">
+												<div class="school-title-fs-24">新片场学院</div>
+												<p class="school-slogan-fs-300">专业的影视教育平台<span></span></p>
+												<p class="school--fs-12-fw">拍摄制作／后期特效／在线视频／线下实训</p>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="shool-card-item">
+									<div class="shool-card-item-left">
+										<a>
+											<img src="Homepage/img/295c9de973e0507.jpg"/>
+										</a>
+									</div>
+									<div class="shool-card-item-bottom">
+										<a class="mask"><h3>商业广告创作课</h3></a>
+										<div class="course-teacher">
+											<span>新片场学院</span>
+											<span class="vertical-line"></span>
+											<span>线下实训</span>
+										</div>
+										<div class="course-intro-line-hide-2">“线上理论授课+4天实践创作”，学习时间灵活，老师全程参与，创作时间充裕，助你打造属于自己的得意之作！</div>
+										<div class="extra-clearfix">
+											<ul>
+												<li>
+													<a>摄影</a>
+												</li>
+												<li>
+													<a>广告</a>
+												</li>
+												<li>
+													<a>中级</a>
+												</li>
+												<li>
+													<a>进阶</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="shool-card-item">
+									<div class="shool-card-item-left">
+										<a>
+											<img src="Homepage/img/045ca5bdd19a7a0.png"/>
+										</a>
+									</div>
+									<div class="shool-card-item-bottom">
+										<a class="mask"><h3>好莱坞电影制作人大师班</h3></a>
+										<div class="course-teacher">
+											<span>Richard N. Gladstein</span>
+											<span class="vertical-line"></span>
+											<span>昆汀御用制作人</span>
+										</div>
+										<div class="course-intro-line-hide-2">昆汀御用制作人、美国电影学院（AFI）前校长教你好莱坞电影工业制作经验。</div>
+										<div class="extra-clearfix">
+											<ul>
+												<li>
+													<a>制作人</a>
+												</li>
+												<li>
+													<a>导演</a>
+												</li>
+												<li>
+													<a>中级</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="school-resource-dplus-list-wrap">
+						<div class="title-wrap">
+							<span class="title-wrap-span-left">新片场素材库</span>
+							<span class="title-wrap-span-right">NEW STUDIOS MATERIAL</span>
+						</div>
+						<div class="school-list-wrap">
+							<ul class="school-list-wrap-ul">
+								<li class="school-intro-item">
+									<img class="school-intro-img" src="Homepage/img/265ae17f3d884e9.png"/>
+									<a>
+										<div class="school-intro-wrap">
+											<div class="school-intro-detail">
+												<div class="school-title-fs-24">新片场素材库</div>
+												<p class="school-slogan-fs-300">正规音乐、视频版权素材在线购买<span></span></p>
+												<p class="school--fs-12-fw">正版素材／开具发票</p>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="sucai-li">
+									<div class="sucai-item-top">
+										<a>
+											<img class="sucai-li-div-img" src="Homepage/img/QQ截图20190415120338.png"/>
+										</a>
+									</div>
+									<div class="sucai-item-bottom">
+										<div class="sucai-cate-list">
+											<ul>
+												<li>
+													<a>积极/明快</a>
+												</li>
+												<li>
+													<a>振奋人心</a>
+												</li>
+												<li>
+													<a>宽广/磅礴</a>
+												</li>
+												<li>
+													<a>好斗/急躁</a>
+												</li>
+												<li>
+													<a>温馨/幸福</a>
+												</li>
+												<li>
+													<a>人声采样</a>
+												</li>
+												<li>
+													<a>阿卡贝拉</a>
+												</li>
+												<li>
+													<a>弦乐组</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="sucai-li">
+									<div class="sucai-item-top">
+										<a>
+											<img class="sucai-li-div-img" src="Homepage/img/QQ截图20190415120406.png"/>
+										</a>
+									</div>
+									<div class="sucai-item-bottom">
+										<div class="sucai-cate-list">
+											<ul>
+												<li>
+													<a>卡通</a>
+												</li>
+												<li>
+													<a>Logo</a>
+												</li>
+												<li>
+													<a>海报</a>
+												</li>
+												<li>
+													<a>插画</a>
+												</li>
+												<li>
+													<a>背景</a>
+												</li>
+												<li>
+													<a>科技</a>
+												</li>
+												<li>
+													<a>花</a>
+												</li>
+												<li>
+													<a>名片</a>
+												</li>
+												<li>
+													<a>星空</a>
+												</li>
+												<li>
+													<a>图标</a>
+												</li>
+												<li>
+													<a>banner</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					</div>
+				</div>
+			<div id="menu-footer-wrap">
+				<div class="footer-inner">
+					<div class="footer-con-clearfix">
+						<div class="left-fl">
+							<div>
+							<img src="img/timg.png" width="150px" height="160px" />
+							<span>用作品打动世界！</span>
+							</div>
+							<p>新片场是国内专业的影视创作人社区，汇聚众多优秀创作人，提供作品展示、项目交流、拍摄制作机会等影视行业服务。在这里，你可以找到合适的创作人。在这里，用作品打动世界！</p>
+						</div>
+						<div class="right-fr-clearfix">
+							<div class="column-item-fl">
+								<p>关于</p>
+								<ul>
+									<li>关于我们</li>
+									<li>使用帮助</li>	
+									<li>加入我们</li>
+									<li>用户协议</li>
+									<li>企业店铺</li>
+								</ul>
+							</div>
+							<div class="column-item-fl">
+								<p>活动</p>
+								<ul>
+									<li>NEW ERA 青年电影季</li>
+									<li>创作吧少年</li>	
+									<li>新片场高校巡展</li>
+									<li>更多活动</li>
+								</ul>
+							</div>
+							<div class="column-item-fl">
+								<p>新片场集团</p>
+								<ul>
+									<li>新片场社区</li>
+									<li>新片场影业</li>	
+									<li>新片场短视频</li>
+									<li>新片场营销</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom">
+					<div class="bottom-con">
+						<div class="bottom-con-div">
+							<span class="copyright">Copyright © 2017 - 2019 新片场. All rights reserved.</span>
+							<span class="copyright">京ICP备14003808号-1</span>
+							<p>
+								<img src="img/ba-icon.png"/>
+								<span class="copyright">京公网安备11010102002903号</span>
+							</p>
+						</div>
+						<img src="img/weibu.PNG" width="160px" height="28px" class="weibuimg"/>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

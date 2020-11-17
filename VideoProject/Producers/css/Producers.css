@@ -1,0 +1,422 @@
+#channel-container{
+				width: 1140px;
+			    margin: 0 auto;
+			    padding: 85px 20px 40px;
+			}
+			.choose-bar-v3{
+				display: block;
+			}
+			.choose-bar-top{
+				padding: 11px 2px;
+			    background-color: #fff;
+			    border: solid 1px #f0f0f0;
+			}
+			.classify{
+				position: relative;
+				height: 31px;
+	
+			}
+			.classify li{
+				float: left;
+    			margin: 5px 16px;
+			}
+			.choose-bar-top .selected a{
+				background-color: #e74b3b;
+    			color: #FFFFFF;
+			}
+			.classify li a{
+				display: block;
+			    padding: 2px 8px;
+			    border-radius: 2px;
+			    font-size: 12px;
+			    font-weight: 300;
+			}
+			.choose-bar-bottom .sort-type{
+				display: inline-block;
+				color: #333;
+				font-size:12px;
+				font-weight: 300;
+			}
+			.sort-type li{
+				float: left;
+   				margin-right: 48px;
+			}
+			.icon-hot{
+				padding-left: 20px;
+				color: #e74b3b;
+				font-weight: 500;
+				position: relative;
+				line-height: 58px;
+				display: block;
+			}
+			.icon-hot:before{
+				position: absolute;
+				background-image: url(../img/huo-show.png);
+				background-size: cover;
+				content: "";
+	width: 11.5px;
+	height: 12px;
+	position: absolute;
+    left: 0;
+    top: 40%;
+}
+.icon-choice{
+	position: relative;
+    display: block;
+    padding-left: 20px;
+    line-height: 58px;
+}
+.icon-choice:before{
+	position: absolute;
+	background-image: url(Producers/img/qi-hide.png);
+	background-size: cover;
+	content: "";
+	width: 11.5px;
+	height: 12px;
+	position: absolute;
+    left: 0;
+    top: 40%;
+}
+.icon-time{
+	position: relative;
+    display: block;
+    padding-left: 20px;
+    line-height: 58px;
+}
+.icon-time:before{
+	position: absolute;
+	background-image: url(Producers/img/biao-hide.png);
+	background-size: cover;
+	content: "";
+	width: 12.5px;
+	height: 12px;
+	position: absolute;
+    left: 0;
+    top: 40%;
+}
+.detail-type-clearfix{
+	float: right;
+	color: #333;
+	font-size: 12px;
+	font-weight: 300;
+}
+.detail-type-clearfix .icon-arrow-down{
+	position: relative;
+    float: left;
+    line-height: 58px;
+    margin-left: 48px;
+    padding-right: 12px;
+    cursor: pointer;
+    color: #000;
+	font-size: 12px;
+	font-weight: 500;
+}
+.detail-type-clearfix .icon-arrow-down:before{
+	position: absolute;
+	right: 3px;
+	top: 41%;
+	width: 5px;
+	height: 5px;
+	border-color: rgba(0,0,0,0.4);
+}
+.detail-type-clearfix .icon-arrow-down span{
+	line-height: 58px;
+	cursor: pointer;
+}
+.video-list{
+	width: 1160px;
+}
+.video-list .enter-filmplay{
+	margin-top: 0;
+	display: inline-block;
+    background: #fff;
+    margin: 20px 15px 0 0;
+    vertical-align: top;
+    cursor: pointer;
+}
+.video-cover{
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	color: #333;
+	cursor: pointer;
+}
+.video-cover .lazy-img-show{
+	width: 270px;
+	height: 162px;
+	background: #f0f0f0;
+}
+.video-cover .duration{
+	color: #fffefe;
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    line-height: 1;
+    font-weight: 300;
+    z-index: 1;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    font-size: 12px;
+}
+.video-cover-con{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: .15s ease-in-out;
+}
+.video-cover-con .video-mark{
+    position: absolute;
+    width: 100%;
+    top: 12px;
+    left: 0;
+    padding: 0 14px;
+    box-sizing: border-box;
+}
+.video-cover-con .video-mark .pick-square span{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-color: #000000;
+	border-radius: 50%;
+	position: relative;
+}
+.video-cover-con .video-mark .pick-square span:before{
+	position: absolute;
+	background-image: url(Producers/img/tishi.png);
+	background-size: cover;
+	content: "";
+	width: 8px;
+	height: 9.5px;
+	position: absolute;
+    left:8px;
+    top: 8px;
+}
+.list-tags{
+	float: right;
+}
+.video-hover-con{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    opacity: 0;
+}
+.video-hover-con .brief-introduction{
+	margin: 14px;
+	max-height: 53px;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: 300;
+	-webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.video-hover-con .fs_12{
+	color: #fff;
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    line-height: 1;
+    font-weight: 300;
+    font-size: 12px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.video-con{
+	width: 270px;
+	position: relative;
+	cursor: pointer;
+}
+.video-con .video-con-top{
+	padding: 16px;
+}
+.video-con .video-con-top a p{
+	color: #333333;
+	font-size: 14px;
+	font-weight: 600;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.video-con .video-con-top .new-cate{
+	margin-top: 12px;
+	text-align: left;
+}
+.video-con .video-con-top .new-cate span{
+	display: inline-block;
+	vertical-align: middle;
+	color: #999999;
+	font-size: 12px;
+	font-weight: 300;
+	text-align: left;
+}
+.video-view-fs{
+	color: #999999;
+	font-size: 12px;
+	font-weight: 300;
+	margin-top: 10px;
+}
+.video-view-fs .icon-play-volume-left{
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 20px;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.video-view-fs .icon-play-volume-left:before{
+	position: absolute;
+	background-image: url(Producers/img/QQ截图20190416165002.png);
+	background-size: cover;
+	content: "";
+	width: 13px;
+	height: 13px;
+	position: absolute;
+    left:0px;
+    top: -1px;
+}
+.video-view-fs .icon-play-volume-right{
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 20px;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.video-view-fs .icon-play-volume-right:before{
+	position: absolute;
+	background-image: url(Producers/img/QQ截图20190416165031.png);
+	background-size: cover;
+	content: "";
+	width: 16px;
+	height: 13px;
+	position: absolute;
+    left:0px;
+    top: -1px;
+}
+.user-info{
+	position: relative;
+    display: flex;
+    flex-flow: nowrap;
+    overflow: hidden;
+    line-height: 48px;
+    padding: 0 16px;
+    border-top: 1px solid #f7f7f7;
+    cursor: pointer;
+}
+.user-info a{
+	white-space: nowrap;
+	cursor: pointer;
+	display: block;
+}
+.user-info a .head-wrap{
+	position: relative;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1;
+}
+.user-info a .head-wrap img{
+	width: 22px;
+	height: 22px;
+	background: #f0f0f0;
+	border: 1px solid #f0f0f0;
+	display: inline-block;
+	-webkit-border-radius: 50%;
+}
+.author-v-yellow-v{
+	background-image: url(Producers/img/yellow-v.png);
+	width: 10px;
+    height: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.author-title{
+	padding-left: 8px;
+    max-width: 125px;
+    white-space: nowrap;
+    font-weight: 500;
+    color: #333;
+    font-size: 12px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.v-center-line-hide-1{
+	padding-left: 16px;
+    white-space: nowrap;
+    flex-grow: 1;
+    color: #999999;
+    font-size: 12px;
+    font-weight: 300;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 48px;
+}
+.page-wrap{
+	text-align: center;
+    margin-top: 20px;
+    font-size: 0;
+}
+.page .current{
+	background: #e74b3b;
+	color: #fff;
+}
+.page *{
+	min-width: 30px;
+    padding: 0 5px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+	background: #fff;
+}
+.page .arrow-page-a{
+	padding: 0;
+	margin: 0;
+}
+.page .arrow-page:before{
+	display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    transform: scale(0.9);
+    font-weight: 300;
+	cursor: pointer;
+    color: #e3e4e5;
+	content: "";
+	border-bottom: 2px solid rgba(0,0,0,0.7);
+	border-right: 2px solid rgba(0,0,0,0.7);
+	border-radius: 2px;
+	width: 7px;
+	height: 7px;
+	transform:rotate(-45deg);
+}

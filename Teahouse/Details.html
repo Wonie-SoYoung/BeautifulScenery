@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="Deteils/css/Details.css"/>
+		<link rel="stylesheet" type="text/css" href="Deteils/css/Details2.css"/>
+		<style type="text/css">
+			@-webkit-keyframes chuchangimg1{
+				0%{transform: scale(0.1);}
+				100%{transform: scale(1);}
+			}
+			@-webkit-keyframes chuchanggoods{
+				0%{transform: translateY(20px);opacity: 0;}
+				100%{transform: translateY(0);opacity: 1;}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="yinyin"></div>
+		<!--左侧主要内容-->
+		<div id="leftcontent">
+			<img src="Deteils/img/logo.PNG" width="50px" height="50px" class="imglogo" onclick="javascript:window.location.href='Home_page.html'" onmouseover="javascript:this.style.cursor='pointer'"/>
+			<div class="classify">
+				<div class="package" onmouseover="menuhover(this)" onmouseout="menuleave(this)" onclick="divclick1(this)">
+					<div></div>
+					<p>Package</p>
+				</div>
+				<div class="howto" onmouseover="menuhover(this)" onmouseout="menuleave(this)" onclick="divclick2(this)">
+					<div></div>
+					<p>How to drink</p>
+				</div>
+			</div>
+			<img src="Deteils/img/picture1.jpg" id="shangping"/>
+			<img src="Deteils/img/menu.png"  id="hecha"/>
+		</div>
+		<!--右侧主要内容-->
+		<div id="rightcontent">
+			<div id="header">
+				<img src="Deteils/img/jjj.png" width="17px" height="15px" class="jianto1"/>
+				<img src="Deteils/img/wqe.png" width="20px" height="17px" class="mofang"/>
+				<img src="Deteils/img/kksj.png" width="17px" height="15px" class="jianto2"/>
+			</div>
+			<div id="information">
+				<div id="zhedie">
+					<div class="detailshead">
+						<p>極知覧茶</p>
+						<p>Kiwami</p>
+						<img src="Deteils/img/aixin.png"/>
+					</div>
+					<div class="ul_li_nr">
+						<ul>
+							<li style="border-color: #DDDD6E;background-color: #DDDD6E;">ギフト</li>
+							<li style="border-color: #C1CB81;background-color: #C1CB81;">深蒸し茶</li>
+						</ul>
+						<p class="pname">
+							<br/>我只用手工精心挑选的"hatsushima新茶"(手工采摘最早的新茶)。
+							通过覆盖和生长来拉动味道的茶叶是一种清爽易饮的味道，
+							同时具有像玉露的味道。为了摆脱芽的气味，它是用低热量烘烤的。
+						</p>
+						<div class="price">
+							<p>内容&nbsp;&nbsp;&nbsp;&nbsp;100克</p>
+							<p>价格&nbsp;&nbsp;&nbsp;&nbsp;¥3,000 +税</p>
+							<img src="Deteils/img/00000064_image_4.jpg" width="100px"/>
+						</div>
+					</div>
+					<div class="jiaru" onmouseover="shophover(this)" onmouseout="shoplaster(this)">
+						<div></div>
+						<img src="Deteils/img/下载.png" width="300px" onclick="insert()"/>
+					</div>
+					<div class="weidao">
+						<p>味道</p>
+						<p>您可以享受新芽的清爽口感。为了礼物和款待。</p>
+						<img src="Deteils/img/mei.png" width="250px" height="260px"/>
+					</div>
+					<div class="typeshop">
+						<p>主要混合茶叶</p>
+						<ul>
+							<li style="color: #63AF8C; border-color: #63AF8C;">薮北茶</li>
+							<li>即使是绿色</li>
+							<li>Yutaka Green</li>
+							<li>晨露</li>
+							<li>Asanoka</li>
+							<li style="color: #63AF8C; border-color: #63AF8C;">Okumidori</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--尾部主要内容-->
+		<div id="afterbody">
+			<div class="tieku">
+				<span>ホーム</span>
+				<img src="Commodity/img/arrow_bread.svg" />
+				<span>Pole Foundation Brown</span>
+			</div>
+			<div class="site">
+				<img src="Commodity/img/捕获.PNG" width="80px" height="80px"/>
+				<p class="sitep1">鹿児島県南九州市知覧町郡17385</p>
+				<p class="sitep2">TEL : +81(0)993-83-2851</p>
+				<p class="sitep3">17385 Kori, Chirancho, Minamikyushu-shi, kagoshima, Japan 897-0302</p>
+			</div>
+		</div>
+		<!--侧菜单列表-->
+		<div  id="navigaion">
+			<img src="img/mengsjah.svg" width="200px" height="140px" id="imgement"/>
+			<div id="shopping" onclick="cartdisplay()">
+				<span>
+					网上商店
+				</span>
+				<img src="img/お茶のはまだ.svg" width="25px" height="25px"/>
+			</div>
+			<div id="click1" onclick="homecleck1()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="click2" onclick="homecleck2()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="xiaomenu">
+				<ul>
+					<li id="1" onmouseover="hover(this)" onmouseout="leaver(this)"  onclick="javascript:window.location.href='Commodity.html'">
+						<div></div>
+						<img src="img/menu_products.svg"/>
+					</li>
+					<li id="2" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_honto.svg"/>
+					</li>
+					<li id="3" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_leaf.svg"/>
+					</li>
+					<li id="4" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_blend.svg"/>
+					</li>
+					<li id="5" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_tashinamu.svg"/>
+					</li>
+					<li id="6" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_info.svg"/>
+					</li>
+					<li id="7" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_shop.svg"/>
+					</li>
+					<li id="8" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_contact.svg"/>
+					</li>
+				</ul>
+			</div>
+			<p id="pname">©HAMADA&nbsp;TEA。</p>
+		</div>
+		<!--购物车侧影-->
+		<div id="Cart">
+			<div class="carttitlt" onclick="carthide()">
+				<img src="img/お茶のはまだ.svg" width="25px" height="25px"/>
+				<span id="number">2</span>
+			</div>
+			<div class="article">
+				<ul>
+					<li style="background-image: url(Deteils/img/02fce7761b136155ccd3.jpeg);">
+						<div class="itemdetails">
+							<img src="Deteils/img/QQ截图20190209134304.png" class="cha" onclick="shopclose(this.parentNode.parentNode)"/>
+							<p class="corporation">Tea said</p>
+							<p class="chaname">适用于礼品盒化妆包3件</p>
+							<div class="shopnum" value="250.00">
+								<div class="jia" onclick="jiaclick(this.nextElementSibling)">+</div>
+								<span class="shopnumber">1</span>
+								<div class="jian" onclick="jianclick(this.previousElementSibling)">-</div>
+							</div>
+							<p class="chandi">origin:Japan</p>
+							<p class="money">$250.00</p>
+						</div>
+					</li>
+					<li style="background-image: url(Deteils/img/c22.jpg)">
+						<div class="itemdetails">
+							<img src="Deteils/img/QQ截图20190209134304.png" class="cha" onclick="shopclose(this.parentNode.parentNode)"/>
+							<p class="corporation">Tea said</p>
+							<p class="chaname">Koshida Tea Tokujo</p>
+							<div class="shopnum" value="2000.00">
+								<div class="jia" onclick="jiaclick(this.nextElementSibling)">+</div>
+								<span class="shopnumber">1</span>
+								<div class="jian" onclick="jianclick(this.previousElementSibling)">-</div>
+							</div>
+							<p class="chandi">origin:Japan</p>
+							<p class="money">$2000.00</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="paying">
+				<h2>Summary</h2>
+				<ul>
+					<li>
+						<span>SUBTOTAL:</span>
+						<span id="subtotal">$2250.00</span>
+					</li>
+					<li>
+						<span>DELIVERY:</span>
+						<span>Free</span>
+					</li>
+					<li>
+						<span>DISCOUNT:</span>
+						<span>-6.145%</span>
+					</li>
+					<li>
+						<span>TOTAL:</span>
+						<span id="totalprice">$138.00</span>
+					</li>
+				</ul>
+				<div class="tijiaomoney" onclick="javascript:window.location.href='Payment.html'">CHECK OUT</div>
+			</div>
+		</div>
+		<script src="Deteils/js/Details.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function cartdisplay(){
+				var yinyin=document.defaultView.getComputedStyle(document.getElementById("yinyin"),null).display;
+				var shop=document.getElementById("Cart");
+				shop.style.display="block";
+				shop.className="cartdisplay";
+				document.getElementById("yinyin").style.display="block";
+			}
+			function carthide(){
+				var yinyin=document.defaultView.getComputedStyle(document.getElementById("yinyin"),null).display;
+				var shop=document.getElementById("Cart");
+				shop.className="carthide";
+				setTimeout("shopdisplay();",1000);
+				document.getElementById("yinyin").style.display="none";
+			}
+			function shopdisplay(){
+				document.getElementById("Cart").style.display="none";
+			}
+			//计算小计和总价
+			function assetvaluation(){
+				var shopnum=document.getElementsByClassName("shopnum");
+				var shopnumber=document.getElementsByClassName("shopnumber");
+				var arraymoney=new Array();
+				var arraynum=new Array();
+				var nummoney=0;
+				var quantity=0;
+				for (var i=0;i<shopnum.length;i++) {
+					arraymoney[i]=shopnum[i].getAttribute("value");
+					quantity++;
+				}
+				for (var i=0;i<shopnumber.length;i++) {
+					arraynum[i]=shopnumber[i].innerHTML;
+				}
+				for (var i=0;i<arraymoney.length;i++) {
+					nummoney+=parseFloat(arraymoney[i])*parseFloat(arraynum[i]);
+				}
+				document.getElementById("subtotal").innerHTML="$"+parseInt(nummoney)+".00";
+				document.getElementById("totalprice").innerHTML="$"+(parseInt(nummoney*0.06145))+".00";
+				document.getElementById("number").innerHTML=quantity;
+			}
+			//增加减数量
+			function jiaclick(num){
+				var number=parseInt(num.innerHTML);
+				if(number<10){
+					num.innerHTML=number+1;
+					assetvaluation();
+				}else{
+					alert("最多只能购买10件!");
+				}
+			}
+			function jianclick(num){
+				var number=parseInt(num.innerHTML);
+				if(number>1){
+					num.innerHTML=number-1;
+					assetvaluation();
+				}else{
+					alert("数量不能低于1!");
+				}
+			}
+			//取消商品
+			function shopclose(liclose){
+				var bool=confirm("确定要删除这件商品吗?\u000d难道你穷到连一包茶叶都买不起吗？");
+				if(bool==true){
+					liclose.parentNode.removeChild(liclose);
+					assetvaluation();
+				}
+			}
+			//增加商品
+			function insert(){
+				var shopname="Pole Foundation Brown";
+				var channames=document.getElementsByClassName("chaname");
+				for (var i=channames.length-1;i>0;i--) {
+					if(channames[i].innerHTML!=shopname){
+						var flert=document.getElementsByClassName("article")[0].firstElementChild;
+						//创建商品金钱
+						var money=document.createElement("p");
+						money.setAttribute("class","money");
+						money.innerHTML="$3000.00";
+						//创建产地
+						var chandi=document.createElement("p");
+						chandi.setAttribute("class","chandi");
+						chandi.innerHTML="origin:Japan";
+						//创建包含增加减图标div1
+						var shopnum=document.createElement("div");
+						shopnum.setAttribute("class","shopnum");
+						shopnum.setAttribute("value","3000.00");
+						//创建增图标
+						var jia=document.createElement("div");
+						jia.setAttribute("class","jia");
+						jia.setAttribute("onclick","jiaclick(this.nextElementSibling)");
+						jia.innerHTML="+";
+						//创建商品数量
+						var shopnumber=document.createElement("span");
+						shopnumber.setAttribute("class","shopnumber");
+						shopnumber.innerHTML="1";
+						//创建减图标
+						var jian=document.createElement("div");
+						jian.setAttribute("class","jian");
+						jian.setAttribute("onclick","jianclick(this.previousElementSibling))");
+						jian.innerHTML="-";
+						//把商品数量及增加减图标添加到div1中
+						shopnum.appendChild(jia);
+						shopnum.appendChild(shopnumber);
+						shopnum.appendChild(jian);
+						//创建商品名称
+						var chaname=document.createElement("p");
+						chaname.setAttribute("class","chaname");
+						chaname.innerHTML=shopname;
+						//创建公司名称
+						var corporation=document.createElement("p");
+						corporation.setAttribute("class","corporation");
+						corporation.innerHTML="Tea said";
+						//创建删除图标
+						var cha=document.createElement("img");
+						cha.setAttribute("class","cha");
+						cha.setAttribute("src","Deteils/img/QQ截图20190209134304.png");
+						cha.setAttribute("onclick","shopclose(this.parentNode.parentNode)");
+						//创建包括商品信息的div2
+						var itemdetails=document.createElement("div");
+						itemdetails.setAttribute("class","itemdetails");
+						//把图标、公司名称、商品名称、div1、产地、金钱添加到div2里
+						itemdetails.appendChild(cha);
+						itemdetails.appendChild(corporation);
+						itemdetails.appendChild(chaname);
+						itemdetails.appendChild(shopnum);
+						itemdetails.appendChild(chandi);
+						itemdetails.appendChild(money);
+						//创建li
+						var li=document.createElement("li");
+						li.setAttribute("style","background-image: url(Deteils/img/picture1.jpg)");
+						//把div2添加到li里
+						li.appendChild(itemdetails);
+						//把li添加到ul里
+						flert.appendChild(li);
+						assetvaluation();
+						alert("添加成功！");
+						break;
+					}else{
+						alert("已存在该商品！");
+						break;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

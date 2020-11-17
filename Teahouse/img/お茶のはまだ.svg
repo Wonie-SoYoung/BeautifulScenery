@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="in" id="layer" style="transition-delay: 0s;" viewBox="0 0 40 40" x="0px" y="0px" width="100%" height="100%" version="1.1" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+.st0_cart{fill:none;stroke:#000000;stroke-width:2.2;stroke-miterlimit:10;}
+</style>
+<path class="st0_cart" d="M 40 3.7" />
+<polyline class="st0_cart" points="25.8,10.6 1.4,10.6 4.6,26.5 25.8,26.5 31.2,3.7 40,3.7" />
+<circle class="st0_cart" cx="8.2" cy="33.7" r="2.8" />
+<circle class="st0_cart" cx="22.4" cy="33.7" r="2.8" />
+</svg>

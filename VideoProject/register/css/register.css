@@ -1,0 +1,213 @@
+html{ margin: 0 auto; height: 100%;}
+			body{font:16px/1.5 'PingFang SC', 'Microsoft YaHei', '微软雅黑', STHeiti, sans-serif; margin: 0; padding: 0; position: relative; margin: 0; background: #f7f7f7; overflow-x: hidden; min-width: 1280px; min-height: 100%;background-image: url(register/img/splash-52e44096f61ccb97be15902346a4dfb9.jpg);background-repeat: no-repeat;background-size: cover;}
+blockquote,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {margin: 0; padding: 0}  
+tbody, th, tr, td{border: none;}
+img{border: none; vertical-align: top;}
+a{text-decoration:none; display: inline-block; color: #333;}  
+ul{list-style: none;}
+i{font-style: normal;}
+textarea{outline:none; resize:none;}
+input{line-height: normal; background:none; outline: none; border-radius: none;border: none;}
+.login{
+	position: absolute;
+	top: 0;
+	right: -362px;
+}
+.register{
+	position: relative;
+	top: 0;
+	
+}
+#menu{
+	width: 362px;
+	position: absolute;
+	top: 25%;
+	left: 40%;
+}
+.enter_into{
+	position: relative;
+	width: 100%;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.register-title{
+	text-align: center;
+	padding: 40px;
+}		
+.register-form{
+	width: 305px;
+	margin: 0 auto;
+}	
+.input-div{
+	width: 100%;
+	height: 40px;
+	border: 1px solid #E5E5E5;
+	border-radius: 2px;
+	margin-top: 16px;
+	padding: 0;
+	position: relative;
+}
+.input-div:nth-child(1){
+	margin-top: 0;
+}
+.input-div input{
+	margin-top: -1px;
+	font-size: 14px;
+	vertical-align: initial;
+	height: 98%;
+	padding-left: 10px;
+	width: 96%;
+	font: 400 13.3333px Arial;
+}
+.input-div input:hover{
+	border: 1px solid #BFBFBF;
+}
+.input-div input:nth-child(2){
+	margin-left: 69px;
+}
+.phone-format{
+	display: inline-block;
+	width: 58px;
+	height: 98%;
+	position: absolute;
+	background-color:#F7F7F7;
+	border-right: 1px solid #E5E5E5;
+	line-height: 38px;
+	font-size: 14px;
+	color: rgba(0,0,0,0.6);
+	padding-left: 10px;
+	cursor: pointer;
+}
+.phone-format:before{
+	content: "";
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	right: 15px;
+	top: 12px;
+	border-bottom: 1px solid rgba(0,0,0,0.6);
+	border-right: 1px solid rgba(0,0,0,0.6);
+	transform: rotate(45deg);
+}
+.code-format{
+	display: inline-block;
+	width: 95px;
+	height: 99%;
+	position: absolute;
+	right: 0;
+	background-color:#F7F7F7;
+	border-left: 1px solid #E5E5E5;
+	line-height: 38px;
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+}
+input::-webkit-input-placeholder{
+	color: #BFBFBF;
+}
+.register-tijiao{
+	width: 100%;
+	height: 40px;
+	border-radius: 2px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding: 0;
+	position: relative;
+	background-color: #E74B3B;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+	letter-spacing:5px;
+	cursor: pointer;
+}
+.tiaoyue{
+	font-size: 12px;
+	color: #BFBFBF;
+	margin-bottom: 25px;
+}
+.genhuan{
+	color: #9E9E9E;
+	font-size: 14px;
+	padding: 12px;
+	text-align: center;
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+.errey{
+	font-size: 12px;
+	vertical-align: top;
+	color: red;
+	margin-top: 2px;
+}
+.login-tab{
+	text-align: center;
+	padding-top: 40px;
+}
+.login-tab li{
+	display: inline-block;
+	font-size: 16px;
+	width: 90px;
+	padding: 5px;
+	color: #595959;
+	cursor: pointer;
+}
+.login-tab li:hover{
+	color: #F79586;
+}
+.login-tab li:nth-child(1){
+	color: #E74B3B;
+	border-bottom: 2px solid #E74B3B;
+}
+.login-tab li:nth-child(2){
+	margin-left: 30px;
+}
+.kuang{
+	width: 305px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+.login-tijiao{
+	width: 100%;
+	height: 40px;
+	border-radius: 2px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding: 0;
+	position: relative;
+	background-color: #E74B3B;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+	letter-spacing:5px;
+	cursor: pointer;
+}
+.hoxu{
+	width: 305px;
+	margin: 0 auto;
+	height: 110px;
+}
+.hoxu p{
+	font-size: 14px;
+	color: #9E9E9E;
+	text-align: right;
+	cursor: pointer;
+}
+.hoxu img{
+	width: 240px;
+	height: 33px;
+	position: relative;
+	top: 20px;
+	left: 35px;
+}
+.genhuan{
+	cursor: pointer;
+}
+.genhuan:hover{
+	color: #E74B5C;
+}
+.register-tijiao:hover,.login-tijiao:hover{
+	opacity: 0.8;
+}
+.hoxu p:hover{
+	color: #BFBFBF;
+}

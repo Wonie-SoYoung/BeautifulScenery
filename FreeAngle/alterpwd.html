@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="common/css/common.css" />
+		<link rel="stylesheet" href="alertuser/css/alertpersonal.css" />
+		<style>
+			._21jY ._15VW {
+    width: 17.2rem;
+    margin: 4rem auto 0;
+}
+._21jY ._15VW ._3DaE, ._21jY ._15VW ._16B8, ._21jY ._15VW ._38sj {
+    margin-top: 2rem;
+}
+._3g_I ._3hMV {
+    color: #e64839;
+    font-size: .6rem;
+    margin-top: .4rem;
+}
+._3g_I.Wp22 ._3hMV {
+    position: absolute;
+}
+		</style>
+		<script type="text/javascript" src="home/js/jquery.min.js" ></script>
+	</head>
+	<body>
+		<div id="root">
+			<div class="_2gbz">
+				<div class="_19U0">
+					<div class="_21jY">
+						<form class="_15VW">
+							<div class="_3g_I Wp22">
+								<div class="iXLB ePKS">
+									<label for="reset-password">
+										<div class="_2UVJ"><span>请输入当前密码*</span></div>
+										<input id="reset-password" autocomplete="current-password" type="password" value="">
+									</label>
+								</div>
+								<div class="_3hMV"><span>不能为空</span></div>
+							</div>
+							<div class="_3g_I _38sj Wp22">
+								<div class="iXLB ePKS">
+									<label for="reset-new-password">
+										<div class="_2UVJ"><span>请输入新密码*</span></div>
+										<input id="reset-new-password" autocomplete="new-password" type="password" value="">
+									</label>
+								</div>
+								<div class="_3hMV"><span>不能为空</span></div>
+							</div>
+							<div class="_3g_I _16B8 Wp22">
+								<div class="iXLB ePKS">
+									<label for="reset-new-password2">
+										<div class="_2UVJ"><span>请再次填写密码*</span></div>
+										<input id="reset-new-password2" autocomplete="new-password" type="password" value="">
+									</label>
+								</div>
+								<div class="_3hMV"><span>不能为空</span></div>
+							</div>
+							<div class="_3g_I _3DaE Wp22 _112F">
+								<button type="submit" class="Xwom kdjc _1TkV">
+									<div class="_3HO0"><span>确认</span></div>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		//点击文本框出现焦点
+    $("label input,.I24N,._3xVR,textarea").click(function () {
+        $("label input,.I24N,._3xVR,textarea").css("border",".5px solid #dfdfdf");
+        $(this).css("border","1px solid #7C7C7C");
+    })
+    $(document).click(function(e){
+        var target = $(e.target);
+        if(target.closest("input").length != 0||target.closest(".I24N").length != 0||target.closest("._3xVR").length != 0||target.closest("textarea").length != 0||target.closest("._2B3Z").length != 0) return;
+        $("label input,.I24N,._3xVR,textarea").css("border",".5px solid #dfdfdf");
+        $("._3caY,._2Xm-").hide();
+        if($("#mapSearch").val()!=$("#ismapSearch").val()){
+            $("#mapSearch").val("");
+        }
+    })
+	</script>
+</html>

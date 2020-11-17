@@ -1,0 +1,353 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow-x:hidden ;
+	overflow-y: hidden;
+	padding: 0; margin: 0; 
+	background-color: #e8eeef;
+}
+#page--home{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/sfas.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#damenu{
+	position: absolute;
+	right: 150px;
+	top: 40%;
+	display: none;
+}
+#damenu ul li{
+	float: left;
+	list-style-type:none;
+	/*border: 1px solid;*/
+	width: 43px;
+}
+#damenu ul li:hover {
+	cursor: pointer;
+} 
+#damenu ul li div{
+	border-bottom: 1px solid ;
+	margin-bottom: 17px;
+	width: 15px;
+}
+
+
+
+
+#navigaion{
+	background-color: #FFFFFF;
+	width: 60px;
+	height: 100%;
+	float: right;
+	position: absolute;
+	right: 0px;
+	opacity: 0;
+}
+#imgement{
+	position: absolute;
+	left: 30px;
+	display: none;
+}
+#shopping{
+	position: absolute;
+	right: 15px;
+	top: 10px;
+}
+#shopping span{
+	font-family:"微软雅黑";
+	font-size: 13px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	display: none;
+	position: relative;
+	right: 35px;
+	top: 11px;
+}
+#shopping img{
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}
+#xiaomenu{
+	position: absolute;
+	left: 450px;
+	top: 260px;
+	display: none;
+}
+#xiaomenu ul li{
+	float: left;
+	list-style-type:none;
+	/*border: 1px solid;*/
+	width: 75px;
+}
+#xiaomenu ul li:hover {
+	cursor: pointer;
+} 
+#xiaomenu ul li div{
+	border-bottom: 1px solid ;
+	margin-bottom: 30px;
+	width: 15px;
+}
+#xiaomenu ul li img{
+	/*position: relative;*/
+}
+#click1{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 0px;
+	top: 30%;
+	display: none;
+}
+#click1:hover{
+	cursor: pointer;
+}
+#click1 div:nth-child(1){
+	border-left: 1.8px solid;
+	width: 10px;
+	height: 13px;
+	transform: skew(45deg,-40deg);
+	-webkit-transform: skew(45deg,-40deg);
+	-moz-transform: skew(45deg,-40deg);
+	-o-transform: skew(45deg,-40deg);
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	
+}
+#click1 div:nth-child(2){
+	border-left: 1.8px solid;
+	width: 10px;
+	height: 13px;
+	transform: skew(-45deg,40deg);
+	-webkit-transform: skew(-45deg,40deg);
+	-moz-transform: skew(-45deg,40deg);
+	-o-transform: skew(-45deg,40deg);
+	position: absolute;
+	right: 15px;
+	top: 18px;
+}
+
+#click2{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 0px;
+	top: 45%;
+}
+#click2:hover{
+	cursor: pointer;
+}
+#click2 div:nth-child(1){
+	border-top: 1.5px solid;
+	border-bottom: 1.5px solid;
+	width: 20px;
+	height: 7px;
+	position: absolute;
+	top: 20px;
+	left: 5px;
+}
+#click2 div:nth-child(2){
+	border-top: 1.5px solid;
+	width: 20px;
+	position: absolute;
+	top: 12px;
+	left: 5px;
+}
+#pname{
+	font-family: "Times New Roman";
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	position: absolute;
+	bottom: 50px;
+	left: 47%;
+	display: none;
+}
+
+
+/*小刚叉特效*/
+@-webkit-keyframes sprade{
+	0%{
+		opacity:1;
+	}
+	50%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@-webkit-keyframes spradeoler{
+	100%{
+		opacity: 1;
+	}
+}
+.div1hover{
+	animation: sprade 0.5s linear;
+	-webkit-animation:sprade 0.5s linear;
+	-moz-animation:sprade 0.5s linear;
+	-o-animation:sprade 0.5s linear;
+}
+.div2hover{
+	-webkit-animation:sprade 1s linear;
+	-moz-animation:sprade 1s linear;
+	-o-animation:sprade 1s linear;
+}
+.div1leaver{
+	animation: spradeoler 0.1s linear;
+	-webkit-animation:spradeoler 0.1s linear;
+	-moz-animation:spradeoler 0.1s linear;
+	-o-animation:spraspradeolerde 0.1s linear;
+}
+.div2leaver{
+	-webkit-animation:spradeoler 0.1s linear;
+	-moz-animation:spradeoler 0.1s linear;
+	-o-animation:spradeoler 0.1s linear;
+}
+
+/*鼠标移到菜单li或移开li事件*/
+@-webkit-keyframes lihover{
+	0%{opacity: 1;}
+	20%{opacity: 0.7;}
+	50%{opacity: 0.5;}
+	100%{opacity: 0.3;}
+}
+@-webkit-keyframes lileaver{
+	0%{opacity: 0.5;}
+	100%{opacity: 1;}
+}
+@-webkit-keyframes divhover{
+	0%{width: 0px;}
+	50%{width: 7px;}
+	100%{width: 15px;}
+}
+@-webkit-keyframes divleaver{
+	100%{width: 15px;}
+}
+.lihover{
+	-webkit-animation:lihover 1s linear forwards;
+	-moz-animation:lihover 1s linear forwards;
+	-o-animation:lihover 1s linear forwards;
+}
+.lileaver{
+	-webkit-animation:lileaver 0.1s linear forwards;
+	-moz-animation:lileaver 0.1s linear forwards;
+	-o-animation:lileaver 0.1s linear forwards;
+}
+.divhover{
+	-webkit-animation:divhover 0.2s linear forwards;
+	-moz-animation:divhover 0.2s linear forwards;
+	-o-animation:divhover 0.2s linear forwards;
+}
+.divleaver{
+	-webkit-animation:divleaver 0.1s linear forwards;
+	-moz-animation:divleaver 0.1s linear forwards;
+	-o-animation:divleaver 0.1s linear forwards;
+}
+
+
+/*收缩菜单li动画*/
+@-webkit-keyframes closediv{
+	0%{width: 15px;}
+	100%{width: 0px;}
+}
+@-webkit-keyframes opendiv{
+	0%{width: 0px;}
+	100%{width: 15px;}
+}
+.closediv{
+	animation: closediv 0.5s linear;
+	-webkit-animation:closediv 0.5s linear forwards;
+	-moz-animation:closediv 0.5s linear forwards;
+	-o-animation:closediv 0.5s linear forwards;
+}
+.opendiv{
+	animation: opendiv 0.2s linear;
+	-webkit-animation:opendiv 0.2s linear forwards;
+	-moz-animation:opendiv 0.2s linear forwards;
+	-o-animation:opendiv 0.2s linear forwards;
+}
+@-webkit-keyframes closeimg{
+	0%{transform: translateX(0px); opacity: 1;}
+	100%{transform: translateX(10px); opacity: 0;}
+}
+@-webkit-keyframes openimg{
+	0%{transform: translateX(10px); opacity: 0;}
+	100%{transform: translateX(0px); opacity: 1;}
+}
+.openimg{
+	-webkit-animation:openimg 0.2s linear forwards;
+	-moz-animation:openimg 0.2s linear forwards;
+	-o-animation:openimg 0.2s linear forwards;
+}
+.closeimg{
+	-webkit-animation:closeimg 0.5s linear forwards;
+	-moz-animation:closeimg 0.5s linear forwards;
+	-o-animation:closeimg 0.5s linear forwards;
+}
+
+/*收缩菜单页面动画*/
+@-webkit-keyframes closehome{
+	0%{width: 100%;}
+	100%{width: 60px;}
+}
+@-webkit-keyframes openhome{
+	0%{width: 60px;}
+	100%{width: 100%;}
+}
+.openhome{
+	-webkit-animation:openhome 0.2s ease-in forwards;
+	-moz-animation:openhome 0.2s ease-in forwards;
+	-o-animation:openhome 0.2s ease-in forwards;
+}
+.closehome{
+	-webkit-animation:closehome 0.2s ease-in forwards;
+	-moz-animation:closehome 0.2s ease-in forwards;
+	-o-animation:closehome 0.2s ease-in forwards;
+}
+
+/*菜单收缩字体特效*/
+@-webkit-keyframes closespan1{
+	0%{right: 35px; opacity: 1;}
+	100%{right: 25px; opacity: 0;}
+}
+@-webkit-keyframes openspan1{
+	0%{right: 25px; opacity: 0;}
+	100%{right: 35px; opacity: 1;}
+}
+.openspan1{
+	-webkit-animation:openspan1 0.5s linear forwards;
+	-moz-animation:openspan1 0.5s linear forwards;
+	-o-animation:openspan1 0.5s linear forwards;
+}
+.closespan1{
+	-webkit-animation:closespan1 0.5s linear forwards;
+	-moz-animation:closespan1 0.5s linear forwards;
+	-o-animation:closespan1 0.5s linear forwards;
+}
+
+@-webkit-keyframes closespan2{
+	0%{bottom: 50px; opacity: 1;}
+	100%{bottom: 40px; opacity: 0;}
+}
+@-webkit-keyframes openspan2{
+	0%{bottom: 40px; opacity: 0;}
+	100%{bottom: 50px; opacity: 1;}
+}
+.openspan2{
+	-webkit-animation:openspan2 0.5s linear forwards;
+	-moz-animation:openspan2 0.5s linear forwards;
+	-o-animation:openspan2 0.5s linear forwards;
+}
+.closespan2{
+	-webkit-animation:closespan2 0.5s linear forwards;
+	-moz-animation:closespan2 0.5s linear forwards;
+	-o-animation:closespan2 0.5s linear forwards;
+}
+
+
+

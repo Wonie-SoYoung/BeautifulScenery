@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="Payment/css/Payment.css"/>
+		<link rel="stylesheet" type="text/css" href="Payment/css/Payment2.css"/>
+		<style type="text/css">
+			/*出场特效*/
+			@-webkit-keyframes chuchangimg1{
+				0%{transform: scale(0.1);}
+				100%{transform: scale(1);}
+			}
+			@-webkit-keyframes chuchangwire{
+				0%{height: 0px;}
+				100%{height: 270px;}
+			}
+			@-webkit-keyframes chuchangmenutitle{
+				0%{transform: translateX(-20px);opacity: 0;}
+				100%{transform: translateX(0);opacity: 1;}
+			}
+			@-webkit-keyframes chuchangmenuber{
+				0%{transform: translateY(-20px);opacity: 0;}
+				100%{transform: translateY(0);opacity: 1;}
+			}
+			@-webkit-keyframes chuchanggoods{
+				0%{transform: translateY(20px);opacity: 0;}
+				100%{transform: translateY(0);opacity: 1;}
+			}
+		</style>
+	</head>
+	<body>
+		<!--上面主要内容-->
+		<div id="paycontent">
+			<img src="Payment/img/QQ截图20190209191914.png" width="52px" height="52px" class="imglogo" onclick="javascript:window.location.href='Home_page.html'" onmouseover="javascript:this.style.cursor='pointer'"/>
+			<div class="biaoti">
+				<p>引き渡し後引き渡し</p>
+				<p>cash before delivery</p>
+			</div>
+			<div class="xiahuaxian"></div>
+			<p class="paytitlt">如果你犹豫要不要买一件东西只是因为它比较贵，那就买下来，如果你想买一件东西
+				<br/>只是因为它非常便宜划算那就不要买。</p>
+		</div>
+		<!--主要内容-->
+		<div id="zhuyao">
+			<div class="huiyuanmingcheng">
+				<div class="xinxititle">账户名称</div>
+				<input type="text" name="mingcheng" id="mingcheng" placeholder="お名前を記入してください" class="inptes"/>
+			</div>
+			<div class="huiyuanmingcheng">
+				<div class="xinxititle">电话<span class="bitian" style="left: 45px; top: 100px;">必填</span></div>
+				<input type="text" name="mingcheng" id="mingcheng" placeholder="せるほうしきでんわ" class="inptes"/>
+			</div>
+			<div class="huiyuanmingcheng">
+				<div class="xinxititle">详细地址信息<span class="bitian" style="left: 135px; top: 190px;">必填</span></div>
+				<input type="text" name="mingcheng" id="mingcheng" placeholder="詳細アドレス情報" class="inptes"/>
+			</div>
+			<div class="huiyuanmingcheng">
+				<div class="xinxititle">会员留言<span class="bitian" style="left: 90px; top: 283px;">必填</span></div>
+				<textarea name="textarea" cols="40" rows="6" class="inptes" style="height: 200px;" placeholder="会員からのメッセージ"></textarea>
+			</div>
+			<div id="tijiao">
+				<p>请检查输入内容是否正确</p>
+				<div class="fukuang">
+					<div>入力内容を確認する</div>
+				</div>
+			</div>
+		</div>
+		<!--尾部-->
+		<div id="afterbody">
+			<div class="tieku">
+				<span>ホーム</span>
+				<img src="Commodity/img/arrow_bread.svg" />
+				<span>付款</span>
+			</div>
+			<div class="site">
+				<img src="Commodity/img/捕获.PNG" width="80px" height="80px"/>
+				<p class="sitep1">鹿児島県南九州市知覧町郡17385</p>
+				<p class="sitep2">TEL : +81(0)993-83-2851</p>
+				<p class="sitep3">17385 Kori, Chirancho, Minamikyushu-shi, kagoshima, Japan 897-0302</p>
+			</div>
+		</div>
+		<!--侧菜单列表-->
+		<div  id="navigaion">
+			<img src="img/mengsjah.svg" width="200px" height="140px" id="imgement"/>
+			<div id="shopping">
+				<span>
+					网上商店
+				</span>
+				<img src="img/お茶のはまだ.svg" width="25px" height="25px"/>
+			</div>
+			<div id="click1" onclick="homecleck1()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="click2" onclick="homecleck2()">
+				<div></div>
+				<div></div>
+			</div>
+			<div id="xiaomenu">
+				<ul>
+					<li id="1" onmouseover="hover(this)" onmouseout="leaver(this)"  onclick="javascript:window.location.href='Commodity.html'">
+						<div></div>
+						<img src="img/menu_products.svg"/>
+					</li>
+					<li id="2" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_honto.svg"/>
+					</li>
+					<li id="3" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_leaf.svg"/>
+					</li>
+					<li id="4" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_blend.svg"/>
+					</li>
+					<li id="5" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_tashinamu.svg"/>
+					</li>
+					<li id="6" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_info.svg"/>
+					</li>
+					<li id="7" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_shop.svg"/>
+					</li>
+					<li id="8" onmouseover="hover(this)" onmouseout="leaver(this)">
+						<div></div>
+						<img src="img/menu_contact.svg"/>
+					</li>
+				</ul>
+			</div>
+			<p id="pname">©HAMADA&nbsp;TEA。</p>
+		</div>
+		<script src="Payment/js/Payment.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			window.onload=function(){
+			 //出场特效
+			  document.getElementsByClassName("imglogo")[0].style.animation="chuchangimg1 1s linear";
+			  setTimeout("chuchang()",1000);
+			  setTimeout("chuchang1()",2000);
+			  setTimeout("chuchang2()",3000);
+			}
+			function chuchang(){
+				document.getElementsByClassName('xiahuaxian')[0].style.display="block";
+				document.getElementsByClassName('xiahuaxian')[0].style.animation='chuchangwire 1s linear';
+			}
+			function chuchang1(){
+				document.getElementsByClassName("biaoti")[0].style.display="block";
+				document.getElementsByClassName("paytitlt")[0].style.display="block";
+			  	document.getElementsByClassName("biaoti")[0].style.animation="chuchangmenutitle 1s linear";
+			  	document.getElementsByClassName("paytitlt")[0].style.animation="chuchangmenuber 1s linear";
+			}
+			function chuchang2(){
+				document.getElementById("zhuyao").style.display="block";
+				document.getElementById("zhuyao").style.animation="chuchanggoods 1s linear";
+			}
+		</script>
+	</body>
+</html>
